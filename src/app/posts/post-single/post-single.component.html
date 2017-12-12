@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html >
+<head *ngIf="post">
+
+ <meta property="og:url" content="http://michoacantrespuntocero.com/2018elecciones.com/{{post.slug}}" />
+ <meta property="og:title" content="{{post.title.rendered}}" />
+ <meta property="og:description" content="{{post.excerpt.rendered}}" />
+ <meta property="og:image" content="{{ post.imagen_minsize }}" />
+	<title></title>
+
+	<link rel="stylesheet" href="assets/bootstrap-4.0.0-beta-dist/css/bootstrap.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body >
+
+
+
+ <div class="header">
+
+  <div class="menuIcon" (click)="toggle2()"></div>
+
+  <div class="logo" (click)="GoToInicio()">
+    <img src="assets/images/home/Elige-2018-logo.png">
+  </div><!-- logo -->
+  
+
+  <div class="menu">
+ <app-contador></app-contador>
+
+
+
+
+<!-- MENU MOVIL ================== -->
+<div class="menuMovil">
+  
+</div><!-- menuMovil -->
+
+<div class="Menu-Activo-Movil" [@heroState2]="stateName2" >
+
+  <div class="btn_Close" (click)="toggle2()"></div>
+
+<div class="Bloques" (click)="GoToInicio()">
+  Inicio
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('entrana');">
+  La Entraña
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('asi-paso');">
+  Así pasó
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('donde-dice');">
+  ¿Dónde dice?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('que-me-perdi');">
+  ¿Qué me perdí?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('que-proponen');">
+  ¿Qué proponen?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('que-se-viene');">
+  ¿Qué se viene?
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('quien-jala');">
+  ¿Quién jalá con quién?
+</div>
+
+<div class="Bloques">
+  <a href="http://michoacantrespuntocero.com/" target="_blank">Revolución 3.0 </a>
+</div>
+
+<!-- Contador de Bloques -->
+<app-contador-movil></app-contador-movil>
+
+
+</div><!--Menu-Activo-Movil -->
+
+<!-- MENU MOVIL ================== -->
+
+
+
+<div class="Bloques" (click)="GoToInicio();">
+  Inicio
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('entrana');" >
+  La Entraña
+</div>
+
+<div class="Bloques" (click)="SeleccionMenu('asi-paso');">
+  Así pasó
+</div>
+
+<div class="Bloques">
+  ¿Dónde dice?
+</div>
+
+<div class="Bloques">
+  ¿Qué me perdí?
+</div>
+
+<div class="Bloques">
+  ¿Qué proponen?
+</div>
+
+<div class="Bloques">
+  ¿Qué se viene?
+</div>
+
+<div class="Bloques">
+  ¿Quién jalá con quién?
+</div>
+
+<div class="Bloques">
+  <a href="http://michoacantrespuntocero.com/" target="_blank">Revolución 3.0 </a>
+</div>
+
+
+<div style="clear: both;"></div>
+</div><!-- menu -->
+
+
+</div><!-- header -->
+
+
+<div class="BloqueMainPost" [@fadeInAnimation]="stateName">
+<div class="contenidoPost" *ngIf="post">
+  
+<!-- Imagen del post -->
+ 
+	<div class="Seccion-titulo">
+		 
+		<div class="BloqueDatos">
+			    <div class="titulo" [innerHTML]="post.title.rendered"></div>
+                <div class="fecha">{{ post.post_fecha}}</div>
+                <div class="autor"> Publicado por: {{post.post_author}}</div>		
+		</div><!-- BloqueDatos -->
+
+	<div style="clear: both;"></div>
+	</div><!-- Seccion-titulo -->
+
+
+	<div class="imagenPost">
+		<img src="{{ post.imagen_minsize }}" class="img-fluid">
+	</div>
+
+
+ 
+	 <div [innerHTML]="sanitizer.bypassSecurityTrustHtml(post.content.rendered)" class="Post_Redered"></div> 
+	 <!--<div [innerHTML]="post.content.rendered" class="Post_Redered"></div> -->
+ 
+ 
+ <div class="CompartirTexto">
+ 	Compartir:
+ </div>
+ 
+ <button class="facebook" ceiboShare  [facebook]="{u: repoUrl}">Facebook</button>
+<button class="twitter" ceiboShare  [twitter]="{url:repoUrl, text:TweetTitulo+', más información en el siguiente enlace: '}">Twitter</button>
+<button class="google" ceiboShare  [googlePlus]="{url:repoUrl}">Google Plus</button>
+
+
+
+
+<div *ngIf="!post">
+	<img class="img-fluid" src="assets/images/home/loading2.gif">	
+</div>
+
+</div>
+
+
+<!-- NOTAS RELACIONADAS -->
+<div class="NotasRelacionadas">
+	<div class="SeccionTitulo">Notas Relacionadas</div>
+
+	<div class="BloqueInformacion" *ngFor="let post of posts_related; let i = index; " (click)="selectPost(post.slug)">
+		
+		<div class="imagen">
+			<img src="{{ post.imagen_minsize }}">
+		</div><!-- imagen -->
+
+
+		<div class="informacion">
+			<div class="titulo" [innerHTML]="post.title.rendered"></div>
+			<div [innerHTML]="post.custom_extracto" class="extracto"></div>
+
+		</div><!-- información -->
+
+
+	<div style="clear: both;"></div>
+	</div><!-- BloqueInformacion -->
+
+
+<div style="clear: both;"></div>
+</div><!-- NotasRelacionadas -->
+
+
+</div><!-- BLOQUE MAIN POST -->
+ 
+
+<div class="footer-general">
+  
+  <div class="imagen_elecciones">
+    <a href="http://michoacantrespuntocero.com/2018elecciones.com/">
+     <img src="assets/images/home/Logo-Elecciones-2018.png">
+   </a>
+  </div><!-- imagen_elecciones -->
+
+   <div class="imagen_revo">
+      <a href="http://michoacantrespuntocero.com/" target="_blank">
+        <img src="assets/images/home/Logo-Revo-Elige.png">
+      </a>
+  </div><!-- imagen_revo -->
+
+   
+  <div style="clear: both;"></div>
+</div><!-- footer-page -->
+</body>
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</html>
+
+
+
