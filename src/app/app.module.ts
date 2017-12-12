@@ -12,15 +12,6 @@ import { PostListComponent } from './posts/post-list/post-list.component';
 import { Wpng2RoutingModule } from './app-routing.module';
 import { PostSingleComponent } from './posts/post-single/post-single.component';
 import { PostSingleNormalComponent } from './posts/post-single-normal/post-single-normal.component';
-import { PostListMusicaComponent } from './posts/post-list-musica/post-list-musica.component';
-import { PostListCineComponent } from './posts/post-list-cine/post-list-cine.component';
-import { PostListLibrosRevistasComponent } from './posts/post-list-libros-revistas/post-list-libros-revistas.component';
-import { PostListRadioPodcastComponent } from './posts/post-list-radio-podcast/post-list-radio-podcast.component';
-import { PostListGastronomiaComponent } from './posts/post-list-gastronomia/post-list-gastronomia.component';
-import { PostListArtesaniaComponent } from './posts/post-list-artesania/post-list-artesania.component';
-import { PostListViajesComponent } from './posts/post-list-viajes/post-list-viajes.component';
-import { PostListTruequesComponent } from './posts/post-list-trueques/post-list-trueques.component';
-import { PostListEspaciosComponent } from './posts/post-list-espacios/post-list-espacios.component';
 import { ExposicionesComponent  } from './posts/exposiciones/exposiciones.component';
 import { ConferenciasComponent  } from './posts/conferencias/conferencias.component';
 import { InicioComponent } from './posts/inicio/inicio.component';
@@ -55,14 +46,6 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     PostListComponent,
     PostSingleComponent,
     PostSingleNormalComponent,
-    PostListMusicaComponent,
-    PostListCineComponent,
-    PostListLibrosRevistasComponent,
-    PostListRadioPodcastComponent,
-    PostListGastronomiaComponent,
-    PostListArtesaniaComponent,
-    PostListViajesComponent,
-    PostListTruequesComponent,
     MenuGeneralComponent,
     InicioComponent,
     ExposicionesComponent,
@@ -76,8 +59,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     QuienJalaComponent, 
     ContadorComponent,
     ContadorMovilComponent,
-    CeiboShare,
-    PostListEspaciosComponent
+    CeiboShare
   ],
   imports: [
     BrowserModule,
