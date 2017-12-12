@@ -162,7 +162,7 @@ body{
   width: 100%;
   height: auto;
   background: #EBEBEB;
-  margin-top: 60px;
+  margin-top: 0px;
 }
 
 .header > .logo{
@@ -185,7 +185,6 @@ body{
 .menu{
   width: 100%;
   height: 60px;
-  background: #000;
   font-family: "Gotham-Black";
   font-size: 16px;
   color: #FFF;
@@ -193,7 +192,10 @@ body{
   text-transform: uppercase;
   padding-left: 0px;
   margin-bottom: 60px;
-  position: relative;
+  position: fixed;
+  z-index: 999999;
+  left: 0px;
+  background: #FFF;
 }
 
 .menu > .Bloques{
@@ -205,6 +207,7 @@ body{
   float: left;
   margin-left: 0px;
   background: #000;
+
   cursor: pointer;
   -webkit-transition: all 0.5s ease;
 -moz-transition: all 0.5s ease;
@@ -284,9 +287,13 @@ body{
 
 .menuMovil{
   width: 100%;
-  height: 6px;
+  height: 40px;
+  display: block;
   background: #000;
-  display: none;
+
+  -webkit-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.6);
+-moz-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.6);
+box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.6);
  
 }
 
@@ -297,15 +304,68 @@ body{
   background: url("assets/images/home/menuIcon.png");
   background-size: 24px 24px; 
   position: absolute;
-  top: 0px;
+  top: 7px;
   left:7px;
-  display: none;
+  display: block;
+  z-index: 99999;
 }
 
+.logo-simple{
+  width: 134px;
+  height: auto;
+  position: absolute;
+  left: 48px;
+  top: 2px;
+}
+
+.logo-simple img{
+  width: 100%;
+  height: auto;
+}
  
 
 .Menu-Activo-Movil{
-  display: none;
+  width: 320px;
+  height: 100%;
+  position: fixed;
+  display: block;
+  top: 0;
+  z-index: 999999999;
+  background: #000;
+  padding-top: 40px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: block;
+  background: rgba(0,0,0,0.9);
+}
+
+
+.Menu-Activo-Movil > .Bloques{
+  width: 100%;
+  height: auto;
+  padding-top:  5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  font-size: 18px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+
+.Menu-Activo-Movil > .Bloques a {
+  text-decoration: none;
+  color: #FFF;
+} 
+
+
+.Menu-Activo-Movil > .btn_Close{
+  width: 24px;
+  height: 24px;
+  background: url("assets/images/home/close.png");
+  background-size: 24px 24px;
+  position: absolute;
+  top: 5px;
+  right: 5px; 
 }
 
 
@@ -366,6 +426,22 @@ body{
 
 .texto_publicaciones span{
   color: #CF0C00;
+}
+
+
+.Menu-Activo-Movil > .logo{
+  width: 74%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  margin: 0 auto;
+}
+
+.Menu-Activo-Movil > .logo img{
+  width: 100%;
+  height: auto;
 }
 
 
