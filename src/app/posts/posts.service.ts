@@ -90,6 +90,8 @@ private postsUrl = "http://meditarensupabra.com/demos/AudiosCDO/wp-json/wp/v2/";
         .map((res: Response) => res.json());
   }
 
+
+
   GetCategoryCountCine(): Observable<Post[]> {
       return this.http
         .get(this.postsUrl + 'categories/20')
@@ -161,12 +163,83 @@ private postsUrl = "http://meditarensupabra.com/demos/AudiosCDO/wp-json/wp/v2/";
 
 
 
+
+  // POST PARA PRINCIPALES
+   getPosts_principales(): Observable<Post[]> {
+      return this.http
+        .get(this.postsUrl + 'posts?categories=40&per_page=7&order=desc')
+        .map((res: Response) => res.json());
+  }
+
+
+
+  // POST PARA GLAMOUR
+  getPosts_glamour(): Observable<Post[]> {
+      return this.http
+        .get(this.postsUrl + 'posts?categories=41&per_page=1&order=desc')
+        .map((res: Response) => res.json());
+  }
+
+  getPosts_glamour_next(): Observable<Post[]> {
+        return this.http
+        .get(this.postsUrl + 'posts?categories=41&per_page=4&order=desc&offset=1')
+        .map((res: Response) => res.json());
+  }
+
+
+  // POST PARA INTERNET
+  getPosts_internet(): Observable<Post[]> {
+      return this.http
+        .get(this.postsUrl + 'posts?categories=42&per_page=1&order=desc')
+        .map((res: Response) => res.json());
+  }
+
+  getPosts_internet_next(): Observable<Post[]> {
+        return this.http
+        .get(this.postsUrl + 'posts?categories=42&per_page=4&order=desc&offset=1')
+        .map((res: Response) => res.json());
+  }
+
+
+    // POST PARA DEPORTES
+  getPosts_deportes(): Observable<Post[]> {
+      return this.http
+        .get(this.postsUrl + 'posts?categories=43&per_page=4&order=desc')
+        .map((res: Response) => res.json());
+  }
+
+
+   // POST PARA ESPECTACULOS
+  getPosts_espectaculos(): Observable<Post[]> {
+      return this.http
+        .get(this.postsUrl + 'posts?categories=44&per_page=1&order=desc')
+        .map((res: Response) => res.json());
+  }
+
+  getPosts_espectaculos_next(): Observable<Post[]> {
+        return this.http
+        .get(this.postsUrl + 'posts?categories=44&per_page=4&order=desc&offset=1')
+        .map((res: Response) => res.json());
+  }
+
+    // POST PARA ESPECTACULOS
+  getPosts_en_oaxaca(): Observable<Post[]> {
+      return this.http
+        .get(this.postsUrl + 'posts?categories=45&per_page=4&order=desc')
+        .map((res: Response) => res.json());
+  }
+
+
+
+
+
     // POST PARA CINE
    getPosts_cartelera_home(): Observable<Post[]> {
       return this.http
         .get(this.postsUrl + 'posts?categories=15&per_page=5&order=desc')
         .map((res: Response) => res.json());
   }
+
 
 
 
