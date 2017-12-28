@@ -51,7 +51,8 @@ export class InicioComponent implements OnInit {
   show2 = false;  
   posts_Home: Post[];
   posts: Post[];
-  
+  image: any;
+
 
   categorias: Post[];
   post_count:number;
@@ -60,6 +61,8 @@ export class InicioComponent implements OnInit {
   imageX:any;
   loadMoreVisible : boolean;
   selectedClass: number;
+
+
  
 
   constructor(private postsService: PostsService, private router: Router,  private sanitizer: DomSanitizer, elm: ElementRef) { 
@@ -221,6 +224,11 @@ onScroll () {
 
       });
  }
+
+
+ getBackground(image) {
+    return this.sanitizer.bypassSecurityTrustStyle(`linear-gradient(rgba(29, 29, 29, 0), rgba(16, 16, 23, 0.5)), url(${image})`);
+}
 
 
 
