@@ -130,13 +130,12 @@
 
   <div class="Listado" [@fadeInAnimation]="stateName">
 
-
-   
- 
+<!-- ==================  SECCION PRINCIPALES ================== -->
+   <div class="BloqueSeccionOX">
+    <div class="titulo-Secciones">Noticias Principales</div>
     <div style="clear: both;"></div> 
-   
-
-    <div class="BloqueOX BloqueSize-{{i+1}}"  *ngFor="let post of posts; let i = index; " (click)="selectPost(post.slug)" >
+  
+    <div class="BloqueOX BloqueSize-{{i+1}}"  *ngFor="let post of posts_principales; let i = index; " (click)="selectPost(post.slug)" >
       <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>
     
       <div class="datos">
@@ -157,15 +156,229 @@
 
     </div><!-- BloqueOX -->
 
-  
+  <div style="clear: both;"></div>
+  </div><!-- BloqueSeccionOX -->
 
+
+
+  <!-- ==================  SECCION GLAMOUR ================== -->
+   <div class="BloqueSeccionOX">
+    <div class="titulo-Secciones">Glamour</div>
+    <div style="clear: both;"></div> 
+  
+    <div class="BloqueOX BloqueSize_next-1"  *ngFor="let post of posts_glamour; let i = index; " (click)="selectPost(post.slug)" >
+      <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>
+    
+      <div class="datos">
+         <div class="categoria">
+            <span>
+              {{post.post_categoria}}
+             </span>
+          </div>
+
+          <div class="titulo">
+            <span class="SizeSpan-{{i+1}}">
+            {{ post.title.rendered }}
+          </span>
+          </div>
+
+      </div><!-- datos -->
+
+    </div><!-- BloqueOX -->
+
+
+    <div class="BloqueOX_next">
+      <div class="subloques"  *ngFor="let post of posts_glamour_next; let i = index; " (click)="selectPost(post.slug)" >
+        <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>
+        <div class="datos_bloques_next">
+          
+
+          <div class="titulo">
+            <span class="">
+            {{ post.title.rendered }}
+          </span>
+          </div>
+
+      </div><!-- datos -->
+
+      </div><!--Subloques -->
+       
+
+    </div><!-- BloqueOX Next -->
 
   <div style="clear: both;"></div>
-  </div><!-- Listado -->
-   
+  </div><!-- BloqueSeccionOX -->
 
- 
+
+    <!-- ==================  SECCION INTERNET ================== -->
+   <div class="BloqueSeccionOX">
+    <div class="titulo-Secciones">Internet</div>
+    <div style="clear: both;"></div> 
+  
+    <div class="BloqueOX BloqueSize_next-1"  *ngFor="let post of posts_internet; let i = index; " (click)="selectPost(post.slug)" >
+      <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>
+    
+      <div class="datos">
+         <div class="categoria">
+            <span>
+              {{post.post_categoria}}
+             </span>
+          </div>
+
+          <div class="titulo">
+            <span class="SizeSpan-{{i+1}}">
+            {{ post.title.rendered }}
+          </span>
+          </div>
+
+      </div><!-- datos -->
+
+    </div><!-- BloqueOX -->
+
+
+    <div class="BloqueOX_next">
+      <div class="subloques"  *ngFor="let post of posts_internet_next; let i = index; " (click)="selectPost(post.slug)" >
+        <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>
+        <div class="datos_bloques_next">
+          
+
+          <div class="titulo">
+            <span class="">
+            {{ post.title.rendered }}
+          </span>
+          </div>
+
+      </div><!-- datos -->
+
+      </div><!--Subloques -->
+       
+
+    </div><!-- BloqueOX Next -->
+
+  <div style="clear: both;"></div>
+  </div><!-- BloqueSeccionOX -->
+
+
+
+<!-- ==================  SECCION DEPORTES ================== -->
+   <div class="BloqueSeccionOX">
+
+    <div class="titulo-Secciones">DEPORTES</div>
+    <div style="clear: both;"></div> 
+  
+    <div class="BloqueOX BloqueSize-2"  *ngFor="let post of posts_deportes; let i = index; " (click)="selectPost(post.slug)" >
+      <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>
+    
+      <div class="datos">
+         <div class="categoria">
+            <span>
+              {{post.post_categoria}}
+             </span>
+          </div>
+
+          <div class="titulo">
+            <span class="SizeSpan-{{i+1}}">
+            {{ post.title.rendered }}
+          </span>
+          </div>
+
+
+      </div><!-- datos -->
+
+    </div><!-- BloqueOX -->
+
+  <div style="clear: both;"></div>
+  </div><!-- BloqueSeccionOX -->
+
+
+
+
+  <!-- ==================  SECCION ESPECTACULOS ================== -->
+   <div class="BloqueSeccionOX">
+    <div class="titulo-Secciones">Espectáculos</div>
+    <div style="clear: both;"></div> 
+  
+    <div class="BloqueOX BloqueSize_next-1"  *ngFor="let post of posts_espectaculos; let i = index; " (click)="selectPost(post.slug)" >
+      <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>
+    
+      <div class="datos">
+         <div class="categoria">
+            <span>
+              {{post.post_categoria}}
+             </span>
+          </div>
+
+          <div class="titulo">
+            <span class="SizeSpan-{{i+1}}">
+            {{ post.title.rendered }}
+          </span>
+          </div>
+
+      </div><!-- datos -->
+
+    </div><!-- BloqueOX -->
+
+
+    <div class="BloqueOX_next">
+      <div class="subloques"  *ngFor="let post of posts_espectaculos_next; let i = index; " (click)="selectPost(post.slug)" >
+        <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>
+        <div class="datos_bloques_next">
+          
+
+          <div class="titulo">
+            <span class="">
+            {{ post.title.rendered }}
+          </span>
+          </div>
+
+      </div><!-- datos -->
+
+      </div><!--Subloques -->
+       
+
+    </div><!-- BloqueOX Next -->
+
+  <div style="clear: both;"></div>
+  </div><!-- BloqueSeccionOX -->
+
+
+  <!-- ==================  SECCION EN OAXACA ================== -->
+   <div class="BloqueSeccionOX">
+
+    <div class="titulo-Secciones">En Oaxaca</div>
+    <div style="clear: both;"></div> 
+  
+    <div class="BloqueOX BloqueSize-2"  *ngFor="let post of posts_en_oaxaca; let i = index; " (click)="selectPost(post.slug)" >
+      <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>
+    
+      <div class="datos">
+         <div class="categoria">
+            <span>
+              {{post.post_categoria}}
+             </span>
+          </div>
+
+          <div class="titulo">
+            <span class="SizeSpan-{{i+1}}">
+            {{ post.title.rendered }}
+          </span>
+          </div>
+
+
+      </div><!-- datos -->
+
+    </div><!-- BloqueOX -->
+
+  <div style="clear: both;"></div>
+  </div><!-- BloqueSeccionOX -->
+
+
+
+  </div><!-- Listado -->
 </div><!--scrollPost END -->
+
+
+
 
 
 
