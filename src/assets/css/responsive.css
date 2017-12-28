@@ -509,46 +509,9 @@
   .texto_publicaciones{
     display: block;
   }
+ 
 
-  .header {
-      margin-top: 20px;
-  }
-
-
-.Menu-Activo-Movil{
-  width: 320px;
-  height: 100%;
-  position: fixed;
-  display: block;
-  top: 0;
-  left:  0;
-  z-index: 999999999;
-  background: #FFF;
-  padding-top: 40px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  display: block;
-  background: rgba(0,0,0,0.9);
-}
-
-
-.Menu-Activo-Movil > .Bloques{
-  width: 100%;
-  height: auto;
-  padding-top:  5px;
-  padding-bottom: 5px;
-  padding-left: 20px;
-  font-size: 18px;
-  text-align: left;
-  margin-bottom: 10px;
-}
-
-
-.Menu-Activo-Movil > .Bloques a {
-  text-decoration: none;
-  color: #FFF;
-} 
-
+ 
 
 .Menu-Activo-Movil > .btn_Close{
   width: 24px;
@@ -560,15 +523,30 @@
   right: 5px; 
 }
 
+.logo-simple {
+  top: 15px;
+  font-size: 16px;
+}
+
 
 .BloqueContadorDias {
     top: -160px;
 }
 
-
 .Listado {
   width: 100%;
 }
+
+.redes-header{
+    width: 140px;
+    right: 0px;
+}
+
+.redes-header a{
+  margin-right: 0;
+}
+
+
 
 
 
@@ -690,10 +668,7 @@
     width: 50% !important;
 }
 
-.header{
-  margin-top: 10px;
-}
-
+ 
 
 
 }
@@ -974,13 +949,15 @@
 /* ---- Responsive: 900px
 -------------------------------------------------------- */
 
-@media only screen and (max-width:420px) {
+@media only screen and (max-width:430px) {
+  
+  .redes-header  {
+    top: 35px;
+  }
 
-
-
- 
-
- 
+.Menu-Activo-Movil {
+    width: 320px;
+}
 
 
 }
