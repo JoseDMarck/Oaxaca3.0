@@ -8,6 +8,7 @@ body{
   border: 0 !important;
   padding:  0 !important;
   background: #EBEBEB !important;
+  overflow-x: hidden;
 }
 
 
@@ -481,6 +482,13 @@ color: #D20417;
   padding-top: 90px;
 }
 
+.BloqueSeccionOX{
+  width: 100%;
+  height: auto;
+  margin-bottom: 30px;
+  margin-left: 13px;
+}
+
 .BloquesElecciones{
   width: 25%;
   height: auto;
@@ -518,12 +526,10 @@ color: #D20417;
   overflow: hidden;
   position: relative;
   cursor: pointer;
-
 }
 
 .BloqueOX img{
   width: 100%;
-
 }
 
 
@@ -533,6 +539,7 @@ color: #D20417;
 
 .BloqueSize-2, .BloqueSize-3, .BloqueSize-4, .BloqueSize-5, .BloqueSize-6, .BloqueSize-7, .BloqueSize-8, .BloqueSize-9, .BloqueSize-10{
   width: 25% !important;
+
 }
 
 .imagen-BG{
@@ -555,6 +562,7 @@ color: #D20417;
     transition: .35s ease-in-out;
 
     -webkit-filter: brightness(70%);
+    
     
 
 }
@@ -601,7 +609,7 @@ color: #D20417;
 }
 
 .BloqueOX > .datos > .titulo span {
-  font-family: "Roboto-Light";
+  font-family: "Roboto-Bold";
   font-size: 16px;
   line-height: 30px;
   background: rgba(0,0,0,0.8);
@@ -610,11 +618,99 @@ color: #D20417;
   margin-bottom: 20px;
 }
 
-
 .SizeSpan-1{
   font-size: 24px !important;
   line-height: 26px !important;
 }
+
+
+ 
+/* --------------------------------------------------------
+/* ---- Bloque next
+-------------------------------------------------------- */
+
+
+.BloqueOX_next{
+  width: 50%;
+  height: 531px;
+  float: left;
+  padding: 0px 0 20px 10px;
+  border-right: solid 20px rgba(0, 0, 0, 0);
+  margin-bottom: 30px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.subloques:hover .imagen-BG{
+    width: 105%;
+    height: 105%;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    -o-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+    -webkit-filter: brightness(100%);
+}
+
+.BloqueOX_next > .subloques{
+  width: 50%;
+  height: 250px;
+  float: left;
+  padding: 20px 0 20px 10px;
+  border-right: solid 20px rgba(0, 0, 0, 0);
+  margin-bottom: 30px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.BloqueSize_next-1{
+  width: 50% !important;
+  height: 531px !important;
+}
+
+
+
+.datos_bloques_next{
+  width: 95%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+}
+  
+ .datos_bloques_next > .titulo{
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.datos_bloques_next > .titulo span {
+  font-family: "Roboto-Bold";
+  font-size: 22px;
+  line-height: 30px;
+  background: rgba(0,0,0,0.8);
+  color: #FFF;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.titulo-Secciones{
+  width: 90%;
+  height: auto;
+  font-family: "CPMono_v07_Bold";
+  font-size: 30px;
+  color: #000;
+  text-align: center;
+  padding: 5px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-top: solid 3px #000 ;
+  border-bottom:  solid 3px #000;
+  z-index: 9999;
+  position: relative;
+}
+
+ 
 
 /* --------------------------------------------------------
 /* ---- BLOQUE GRANDE
