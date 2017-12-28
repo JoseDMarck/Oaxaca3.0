@@ -110,6 +110,24 @@ body{
 }
 
 
+@font-face {
+    font-family: "CPMono_v07_Black";
+    src: url("assets/css/fuentes/cpmono-v07/CPMono_v07_Black.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "CPMono_v07_Bold";
+    src: url("assets/css/fuentes/cpmono-v07/CPMono_v07_Bold.otf") format("truetype");
+}
+
+@font-face {
+    font-family: "CPMono_v07_Light";
+    src: url("assets/css/fuentes/cpmono-v07/CPMono_v07_Light.otf") format("truetype");
+}
+
+
+
+
 
 /* --------------------------------------------------------
 /* ---- COLORES GENERALES
@@ -185,11 +203,10 @@ body{
 .menu{
   width: 100%;
   height: 60px;
-  font-family: "Gotham-Black";
+  font-family: "CPMono_v07_Bold";
   font-size: 16px;
   color: #FFF;
   text-align: center;
-  text-transform: uppercase;
   padding-left: 0px;
   margin-bottom: 60px;
   position: fixed;
@@ -221,9 +238,14 @@ body{
 } 
 
 
+
+
+ 
+
 .menu > .Bloques:hover{
-   background: #CF0C00;
-   -webkit-transition: all 0.5s ease;
+  
+
+-webkit-transition: all 0.5s ease;
 -moz-transition: all 0.5s ease;
 -o-transition: all 0.5s ease;
 -ms-transition: all 0.5s ease;
@@ -287,13 +309,17 @@ body{
 
 .menuMovil{
   width: 100%;
-  height: 40px;
+  height: 60px;
   display: block;
-  background: #000;
+  background: #FFF;
 
-  -webkit-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.6);
--moz-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.6);
-box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.6);
+      -webkit-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.1);
+    -moz-box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.1);
+    box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.1);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
  
 }
 
@@ -304,8 +330,8 @@ box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.6);
   background: url("assets/images/home/menuIcon.png");
   background-size: 24px 24px; 
   position: absolute;
-  top: 7px;
-  left:7px;
+  top: 16px;
+  left: 30px;
   display: block;
   z-index: 99999;
 }
@@ -314,15 +340,47 @@ box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.6);
   width: 134px;
   height: auto;
   position: absolute;
-  left: 48px;
-  top: 2px;
+  left: 68px;
+  top: 12px;
+  font-family: "CPMono_v07_Bold";
+  font-size: 20px;
+  color: #D20417;
 }
 
 .logo-simple img{
   width: 100%;
   height: auto;
 }
- 
+
+
+.redes-header{
+  width: 200px;
+  height: auto;
+  position: absolute;
+  right:  68px;
+  top: 12px;
+  font-family: "CPMono_v07_Bold";
+  font-size: 20px;
+  color: #D20417;
+}
+
+.redes-header a{
+  color: #000;
+  margin-right: 10px;
+   -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+
+.redes-header a:hover {
+  color: #D20417;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
 
 .Menu-Activo-Movil{
   width: 320px;
@@ -336,7 +394,15 @@ box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.6);
   overflow-x: hidden;
   overflow-y: hidden;
   display: block;
-  background: rgba(0,0,0,0.9);
+  background: #FFF;
+
+        -webkit-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.1);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(50, 50, 50, 0.1);
+    box-shadow: 5px 5px 5px 0px rgba(50, 50, 50, 0.1);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
 }
 
 
@@ -349,13 +415,27 @@ box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.6);
   font-size: 18px;
   text-align: left;
   margin-bottom: 10px;
+  color: #000;
+  cursor: pointer;
+
+   -webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+-ms-transition: all 0.3s ease;
 }
 
 
-.Menu-Activo-Movil > .Bloques a {
-  text-decoration: none;
-  color: #FFF;
-} 
+.Menu-Activo-Movil > .Bloques:hover{
+  font-size: 26px;
+ -webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+-ms-transition: all 0.3s ease;
+color: #D20417;
+}
+
+
+ 
 
 
 .Menu-Activo-Movil > .btn_Close{
@@ -430,12 +510,12 @@ box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.6);
 
 
 .Menu-Activo-Movil > .logo{
-  width: 74%;
+  width: 50%;
   height: auto;
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 10px;
+  bottom: 40px;
   margin: 0 auto;
 }
 
@@ -445,14 +525,45 @@ box-shadow: 0px 4px 5px -1px rgba(0,0,0,0.6);
 }
 
 
+.Menu-Activo-Movil > .redesSociales{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  margin: 0 auto;
+  background: #000;
+  font-size: 20px;
+}
+
+.Menu-Activo-Movil > .redesSociales a{
+  color: #FFF;
+   -webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+-ms-transition: all 0.3s ease;
+}
+
+.Menu-Activo-Movil > .redesSociales a:hover{
+  color: #D20417;
+  text-decoration: none;
+   -webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+-ms-transition: all 0.3s ease;
+}
+
 /* --------------------------------------------------------
 /* ---- SECCION PARA POST 
 -------------------------------------------------------- */
 
 .Listado{
-  width: 90%;
+  max-width: 1920px;
+  width: 100%;
   height: auto;
   margin: 0 auto;
+  padding-top: 90px;
 }
 
 .BloquesElecciones{
