@@ -563,7 +563,7 @@ color: #D20417;
 
     -webkit-filter: brightness(70%);
     
-    
+
 
 }
 
@@ -695,19 +695,17 @@ color: #D20417;
 }
 
 .titulo-Secciones{
-  width: 90%;
+  width: 30%;
   height: auto;
   font-family: "CPMono_v07_Bold";
-  font-size: 30px;
+  font-size: 25px;
   color: #000;
   text-align: center;
   padding: 5px;
-  margin: 0 auto;
   margin-bottom: 30px;
-  border-top: solid 3px #000 ;
-  border-bottom:  solid 3px #000;
   z-index: 9999;
   position: relative;
+  background: #CC151A;
 }
 
  
