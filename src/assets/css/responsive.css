@@ -215,6 +215,16 @@
 }
  
 
+.Listado{
+  max-width: 100%;
+}
+
+.BloqueOX{
+  width: 25%;
+  height: 400px;
+}
+
+
 
 }/* 14480 */
 
@@ -274,6 +284,14 @@
      padding-left: 5px;
     padding-right: 5px;
   }
+
+
+
+
+.BloqueOX{
+  width: 25%;
+  height: 340px;
+}
 
  
 }/* 1280 */
@@ -397,7 +415,6 @@
 -------------------------------------------------------- */
 
 @media only screen and (max-width:1060px) {
- 
  
 
 
@@ -548,6 +565,13 @@
 
 
 
+.BloqueOX{
+  width: 25%;
+  height: 300px;
+}
+
+
+
 
 
 }
@@ -669,7 +693,19 @@
 }
 
  
+ .BloqueOX{
+  height: 440px;
+}
 
+
+.BloqueSize-2, .BloqueSize-3, .BloqueSize-4, .BloqueSize-5, .BloqueSize-6, .BloqueSize-7, .BloqueSize-8, .BloqueSize-9, .BloqueSize-10{
+  width: 50% !important;
+}
+
+.SizeSpan-1 {
+   font-size: 16px;
+  line-height: 30px;
+}
 
 }
 
@@ -719,6 +755,10 @@
     line-height: 18px;
 }
 
+
+ .BloqueOX{
+  height: 340px;
+}
 
 }/* 900 */
 
@@ -857,7 +897,19 @@
 
 @media only screen and (max-width:490px) {
 
- 
+ .BloqueSize-1{
+  width: 100% !important;
+ }
+
+
+.BloqueSize-2, .BloqueSize-3, .BloqueSize-4, .BloqueSize-5, .BloqueSize-6, .BloqueSize-7, .BloqueSize-8, .BloqueSize-9, .BloqueSize-10{
+  width: 100% !important;
+}
+
+
+ .BloqueOX{
+  height: 440px;
+}
 
 
  .ContendorBloquePost{
@@ -960,6 +1012,9 @@
 }
 
 
+
+
+
 }
 
 /* --------------------------------------------------------
@@ -1000,6 +1055,10 @@
     line-height: 14px;
 }
 
+
+ .BloqueOX{
+  height: 400px;
+}
 
 
 
