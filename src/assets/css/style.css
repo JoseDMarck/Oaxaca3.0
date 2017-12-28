@@ -508,21 +508,17 @@ color: #D20417;
   float: left;
 }
 
-
- 
-
- 
 .BloqueOX{
   width: 25%;
-  height: 600px;
+  height: 500px;
   float: left;
-  padding: 20px 0 20px 20px;
+  padding: 20px 0 20px 10px;
   border-right: solid 20px rgba(0, 0, 0, 0);
   margin-bottom: 30px;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
 }
-
 
 .BloqueOX img{
   width: 100%;
@@ -533,10 +529,9 @@ color: #D20417;
   width: 50% !important;
 }
 
-.BloqueSize-2, .BloqueSize-3, .BloqueSize-4{
+.BloqueSize-2, .BloqueSize-3, .BloqueSize-4, .BloqueSize-5, .BloqueSize-6, .BloqueSize-7, .BloqueSize-8, .BloqueSize-9, .BloqueSize-10{
   width: 25% !important;
 }
-
 
 .imagen-BG{
   width: 100%;
@@ -556,6 +551,70 @@ color: #D20417;
     -moz-transition: .35s ease-in-out;
     -o-transition: .35s ease-in-out;
     transition: .35s ease-in-out;
+
+    -webkit-filter: brightness(80%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.BloqueOX:hover .imagen-BG{
+    width: 105%;
+    height: 105%;
+
+     -webkit-filter: brightness(100%);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+
+.BloqueOX > .datos{
+  width: 95%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+}
+
+.BloqueOX > .datos > .categoria{
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.BloqueOX > .datos > .categoria span{
+  font-family: "CPMono_v07_Bold";
+  font-size: 20px;
+  background: rgba(210,4,23,0.6);
+  color: #FFF;
+  padding: 5px;
+}
+
+
+.BloqueOX > .datos > .titulo{
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.BloqueOX > .datos > .titulo span {
+  font-family: "Roboto-Light";
+  font-size: 16px;
+  line-height: 30px;
+  background: rgba(0,0,0,0.8);
+  color: #FFF;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+
+.SizeSpan-1{
+  font-size: 24px !important;
+  line-height: 26px !important;
 }
 
 /* --------------------------------------------------------
@@ -1074,7 +1133,7 @@ transform: scale(1.1,1.1); /* Standard syntax */
   position: relative;
   overflow-y:  hidden;
   overflow-x: hidden;
-  padding-top: 30px;
+  padding-top: 90px;
   margin: 0 auto;
   float: left;
   margin-bottom: 0px;
