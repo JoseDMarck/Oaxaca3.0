@@ -10,11 +10,7 @@
 <body>
 
 
-<div class="ScrollPost" infiniteScroll 
-        [infiniteScrollDistance]="1200"
-        [infiniteScrollThrottle]="1200"
-        (scrolled)="onScroll()"
-        >
+<div class="ScrollPost">
 
 
 
@@ -61,7 +57,13 @@
 
 <div class="Menu-Activo-Movil" [@heroState2]="stateName2" >
 
-  <div class="btn_Close" (click)="toggle2()"></div>
+<div class="btn_Close" (click)="toggle2()"></div>
+
+
+<div class="logo">
+  <img src="assets/images/home/oaxacaLogo.png">
+</div>
+
 
 <div class="Bloques" (click)="GoToInicio()">
   Inicio
@@ -91,9 +93,7 @@
   En Oaxaca
 </div>
 
-<div class="logo">
-  <img src="assets/images/home/oaxacaLogo.png">
-</div>
+
 
 
 <div class="redesSociales">
@@ -131,14 +131,23 @@
   <div class="Listado" [@fadeInAnimation]="stateName">
 
 
+   
+ 
+    <div style="clear: both;"></div> 
+   
+
+    <div class="BloqueOX BloqueSize-{{i+1}}"  *ngFor="let post of posts; let i = index; " (click)="selectPost(post.slug)" >
+      <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>
+    </div>
 
  
      <div class="BloquesElecciones {{ post.tamano_bloque }}" *ngFor="let post of posts; let i = index; " (click)="selectPost(post.slug)"> 
 
+    
+
         <div class="ContendorBloquePost">
           <div class="imagen">
 
-            
             <div class="fecha">
               <div class="mes">{{ post.post_fecha_mes}}</div>
               <div class="dia">{{ post.post_fecha_dia}}</div>
