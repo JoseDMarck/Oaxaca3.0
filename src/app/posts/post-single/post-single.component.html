@@ -9,124 +9,125 @@
 	<title></title>
 
 	<link rel="stylesheet" href="assets/bootstrap-4.0.0-beta-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="assets/font-awesome-4.7.0/css/font-awesome.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body >
 
 
 
- <div class="header">
+   <div class="header">
 
-  <div class="menuIcon" (click)="toggle2()"></div>
-
-  <div class="logo" (click)="GoToInicio()">
-    <img src="assets/images/home/Elige-2018-logo.png">
-  </div><!-- logo -->
+ 
   
 
   <div class="menu">
- <app-contador></app-contador>
+ 
+   <div class="menuIcon" (click)="toggle2()"></div>
+ 
+
+   <div class="logo-simple">
+     <!-- <img src="assets/images/home/oaxacaLogo.png"> -->
+     oaxacatrespuntocero.com
+   </div>
+
+  <div class="redes-header">
+    <a href="https://www.facebook.com" target="_blank">
+      <i class="fa fa-facebook" aria-hidden="true"></i>
+    </a>
+    
+    <a href="https://twitter.com/" target="_blank">
+      <i class="fa fa-twitter" aria-hidden="true"></i>
+    </a>
+
+    <a href="http://instagram.com/" target="_blank">
+      <i class="fa fa-instagram" aria-hidden="true"></i>
+    </a>
+
+    <a href="https://www.youtube.com/" target="_blank">
+      <i class="fa fa-youtube-play" aria-hidden="true"></i>
+    </a>
+
+</div><!-- redesSociales -->
 
 
 
-
-<!-- MENU MOVIL ================== -->
+ <!-- MENU MOVIL ================== -->
 <div class="menuMovil">
   
 </div><!-- menuMovil -->
 
 <div class="Menu-Activo-Movil" [@heroState2]="stateName2" >
 
-  <div class="btn_Close" (click)="toggle2()"></div>
+<div class="btn_Close" (click)="toggle2()"></div>
+
+
+<div class="logo">
+  <img src="assets/images/home/oaxacaLogo.png">
+</div>
+
 
 <div class="Bloques" (click)="GoToInicio()">
   Inicio
 </div>
 
-<div class="Bloques" (click)="SeleccionMenu('entrana');">
-  La Entraña
+<div class="Bloques">
+  Noticias
 </div>
 
-<div class="Bloques" (click)="SeleccionMenu('asi-paso');">
-  Así pasó
+<div class="Bloques" >
+  Glamour
 </div>
 
-<div class="Bloques" (click)="SeleccionMenu('donde-dice');">
-  ¿Dónde dice?
+<div class="Bloques" >
+  Internet
 </div>
 
-<div class="Bloques" (click)="SeleccionMenu('que-me-perdi');">
-  ¿Qué me perdí?
-</div>
-
-<div class="Bloques" (click)="SeleccionMenu('que-proponen');">
-  ¿Qué proponen?
-</div>
-
-<div class="Bloques" (click)="SeleccionMenu('que-se-viene');">
-  ¿Qué se viene?
-</div>
-
-<div class="Bloques" (click)="SeleccionMenu('quien-jala');">
-  ¿Quién jalá con quién?
+<div class="Bloques" >
+  Deportes
 </div>
 
 <div class="Bloques">
-  <a href="http://michoacantrespuntocero.com/" target="_blank">Revolución 3.0 </a>
+  Espectáculos
 </div>
 
-<!-- Contador de Bloques -->
-<app-contador-movil></app-contador-movil>
+<div class="Bloques">
+  En Oaxaca
+</div>
+
+
+
+
+<div class="redesSociales">
+  <a href="https://www.facebook.com" target="_blank">
+    <i class="fa fa-facebook" aria-hidden="true"></i>
+  </a>
+  
+  <a href="https://twitter.com/" target="_blank">
+    <i class="fa fa-twitter" aria-hidden="true"></i>
+  </a>
+
+  <a href="http://instagram.com/" target="_blank">
+    <i class="fa fa-instagram" aria-hidden="true"></i>
+  </a>
+
+  <a href="https://www.youtube.com/" target="_blank">
+    <i class="fa fa-youtube-play" aria-hidden="true"></i>
+  </a>
+
+</div><!-- redesSociales -->
 
 
 </div><!--Menu-Activo-Movil -->
 
-<!-- MENU MOVIL ================== -->
-
-
-
-<div class="Bloques" (click)="GoToInicio();">
-  Inicio
-</div>
-
-<div class="Bloques" (click)="SeleccionMenu('entrana');" >
-  La Entraña
-</div>
-
-<div class="Bloques" (click)="SeleccionMenu('asi-paso');">
-  Así pasó
-</div>
-
-<div class="Bloques">
-  ¿Dónde dice?
-</div>
-
-<div class="Bloques">
-  ¿Qué me perdí?
-</div>
-
-<div class="Bloques">
-  ¿Qué proponen?
-</div>
-
-<div class="Bloques">
-  ¿Qué se viene?
-</div>
-
-<div class="Bloques">
-  ¿Quién jalá con quién?
-</div>
-
-<div class="Bloques">
-  <a href="http://michoacantrespuntocero.com/" target="_blank">Revolución 3.0 </a>
-</div>
-
+ 
 
 <div style="clear: both;"></div>
 </div><!-- menu -->
 
 
 </div><!-- header -->
+
 
 
 <div class="BloqueMainPost" [@fadeInAnimation]="stateName">
@@ -203,23 +204,7 @@
 </div><!-- BLOQUE MAIN POST -->
  
 
-<div class="footer-general">
-  
-  <div class="imagen_elecciones">
-    <a href="http://michoacantrespuntocero.com/2018elecciones.com/">
-     <img src="assets/images/home/Logo-Elecciones-2018.png">
-   </a>
-  </div><!-- imagen_elecciones -->
-
-   <div class="imagen_revo">
-      <a href="http://michoacantrespuntocero.com/" target="_blank">
-        <img src="assets/images/home/Logo-Revo-Elige.png">
-      </a>
-  </div><!-- imagen_revo -->
-
-   
-  <div style="clear: both;"></div>
-</div><!-- footer-page -->
+ 
 </body>
   <link rel="stylesheet" href="assets/css/responsive.css">
 </html>

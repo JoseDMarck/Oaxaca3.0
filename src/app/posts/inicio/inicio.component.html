@@ -69,27 +69,27 @@
   Inicio
 </div>
 
-<div class="Bloques" (click)="SeleccionMenu('entrana');">
+<div class="Bloques">
   Noticias
 </div>
 
-<div class="Bloques" (click)="SeleccionMenu('asi-paso');">
+<div class="Bloques">
   Glamour
 </div>
 
-<div class="Bloques" (click)="SeleccionMenu('donde-dice');">
+<div class="Bloques">
   Internet
 </div>
 
-<div class="Bloques" (click)="SeleccionMenu('que-me-perdi');">
+<div class="Bloques">
   Deportes
 </div>
 
-<div class="Bloques" (click)="SeleccionMenu('que-proponen');">
+<div class="Bloques">
   Espectáculos
 </div>
 
-<div class="Bloques" (click)="SeleccionMenu('que-se-viene');">
+<div class="Bloques">
   En Oaxaca
 </div>
 
@@ -138,37 +138,26 @@
 
     <div class="BloqueOX BloqueSize-{{i+1}}"  *ngFor="let post of posts; let i = index; " (click)="selectPost(post.slug)" >
       <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>
-    </div>
-
- 
-     <div class="BloquesElecciones {{ post.tamano_bloque }}" *ngFor="let post of posts; let i = index; " (click)="selectPost(post.slug)"> 
-
     
-
-        <div class="ContendorBloquePost">
-          <div class="imagen">
-
-            <div class="fecha">
-              <div class="mes">{{ post.post_fecha_mes}}</div>
-              <div class="dia">{{ post.post_fecha_dia}}</div>
-            </div>
-
-            <img src="{{ post.imagen_normalsize }}" >  
+      <div class="datos">
+         <div class="categoria">
+            <span>
+              {{post.post_categoria}}
+             </span>
           </div>
 
           <div class="titulo">
+            <span class="SizeSpan-{{i+1}}">
             {{ post.title.rendered }}
+          </span>
           </div>
 
-           <div class="categoria">
-             {{post.post_categoria}}
-          </div>
 
-          <div [innerHTML]="post.custom_extracto" class="extracto"></div>
+      </div><!-- datos -->
 
-        </div>
+    </div><!-- BloqueOX -->
 
-     </div><!--BloquesElecciones  -->
+  
 
 
   <div style="clear: both;"></div>
