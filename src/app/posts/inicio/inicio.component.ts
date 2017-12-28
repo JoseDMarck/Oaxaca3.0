@@ -51,7 +51,16 @@ export class InicioComponent implements OnInit {
   show2 = false;  
   posts_Home: Post[];
   posts: Post[];
-  image: any;
+  posts_principales: Post[];
+  posts_glamour: Post[];
+  posts_glamour_next: Post[];
+  posts_internet: Post[];
+  posts_internet_next: Post[];
+  posts_deportes: Post[];
+  posts_espectaculos: Post[];
+  posts_espectaculos_next: Post[];
+  posts_en_oaxaca: Post[];
+
 
 
   categorias: Post[];
@@ -118,10 +127,91 @@ dhms2(t) {
       });
   }
 
+
+  // Principales
+  getPosts_Principales(){
+    this.postsService
+      .getPosts_principales()
+      .subscribe(res => {
+        this.posts_principales = res;
+      });
+  }
+
+  // Glamour
+  getPosts_Glamour(){
+    this.postsService
+      .getPosts_glamour()
+      .subscribe(res => {
+        this.posts_glamour = res;
+      });
+  }
+
+  getPosts_Glamour_next(){
+    this.postsService
+      .getPosts_glamour_next()
+      .subscribe(res => {
+        this.posts_glamour_next = res;
+      });
+  }
+
+
+  // Internet
+  getPosts_Internet(){
+    this.postsService
+      .getPosts_internet()
+      .subscribe(res => {
+        this.posts_internet = res;
+      });
+  }
+
+  getPosts_Internet_next(){
+    this.postsService
+      .getPosts_internet_next()
+      .subscribe(res => {
+        this.posts_internet_next = res;
+      });
+  }
+
+
+  // Deportes
+  getPosts_Deportes(){
+    this.postsService
+      .getPosts_deportes()
+      .subscribe(res => {
+        this.posts_deportes = res;
+      });
+  }
+
+
+  // Internet
+  getPosts_Espectaculos(){
+    this.postsService
+      .getPosts_espectaculos()
+      .subscribe(res => {
+        this.posts_espectaculos = res;
+      });
+  }
+
+  getPosts_Espectaculos_next(){
+    this.postsService
+      .getPosts_espectaculos_next()
+      .subscribe(res => {
+        this.posts_espectaculos_next = res;
+      });
+  }
+
+
+  // En Oaxaca
+  getPosts_en_oaxaca(){
+    this.postsService
+      .getPosts_en_oaxaca()
+      .subscribe(res => {
+        this.posts_en_oaxaca = res;
+      });
+  }
+
+
   
-
-
-
     //ANIMACION TOGGLE
     get stateName() {
         return this.show ? 'show' : 'hide'
@@ -131,9 +221,6 @@ dhms2(t) {
         this.show = !this.show;
     }
 
-
-    //ANIMACIÓN PARA EL MENU
-     //ANIMACIÓN PARA EL MENU
     get stateName2() {
         return this.show2 ? 'inactive' : 'active'
     }
@@ -164,7 +251,15 @@ dhms2(t) {
 
   ngOnInit() {
 
-    this.getPosts_Home();
+    this.getPosts_Principales();
+    this.getPosts_Glamour();
+    this.getPosts_Glamour_next();
+    this.getPosts_Internet();
+    this.getPosts_Internet_next();
+    this.getPosts_Deportes();
+    this.getPosts_Espectaculos();
+    this.getPosts_Espectaculos_next();
+    this.getPosts_en_oaxaca();
 
 
        this.future = new Date(this.futureString);
