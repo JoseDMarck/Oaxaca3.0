@@ -518,10 +518,12 @@ color: #D20417;
   overflow: hidden;
   position: relative;
   cursor: pointer;
+
 }
 
 .BloqueOX img{
   width: 100%;
+
 }
 
 
@@ -552,24 +554,21 @@ color: #D20417;
     -o-transition: .35s ease-in-out;
     transition: .35s ease-in-out;
 
-    -webkit-filter: brightness(80%);
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
+    -webkit-filter: brightness(70%);
+    
+
 }
 
 .BloqueOX:hover .imagen-BG{
     width: 105%;
     height: 105%;
 
-     -webkit-filter: brightness(100%);
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all 1s ease;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    -o-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+    
+    -webkit-filter: brightness(100%);
 }
 
 
