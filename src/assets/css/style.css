@@ -564,9 +564,7 @@ color: #D20417;
     transition: .35s ease-in-out;
 
     -webkit-filter: brightness(70%);
-    
-
-
+  
 }
 
 .BloqueOX:hover .imagen-BG{
@@ -1486,8 +1484,6 @@ padding: 5px;
   width: 100%;
   height: auto;
   margin-bottom: 20px;
-  background:   #FFF;
-
    -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -1508,19 +1504,42 @@ padding: 5px;
 
 .NotasRelacionadas > .BloqueInformacion > .imagen{
   width: 40%;
-  height: 180px;
+  height: 160px;
   background: url("assets/images/home/preloader.gif");
   background-repeat:no-repeat;
   background-size: 128px 128px;
   background-position:center;
   float: left;
   overflow: hidden;
+  position: relative;
 } 
 
-.NotasRelacionadas > .BloqueInformacion > .imagen img{
-  width: 165%;
-  height: auto;
+
+.NotasRelacionadas > .BloqueInformacion > .imagen:hover .imagen-BG{
+    width: 105%;
+    height: 105%;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    -o-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+    
+    -webkit-filter: brightness(100%);
 }
+
+ 
+
+.NotasRelacionadas > .BloqueInformacion:hover .imagen-BG{
+    width: 105%;
+    height: 105%;
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    -o-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+    
+    -webkit-filter: brightness(100%);
+}
+
+
 
 .NotasRelacionadas > .BloqueInformacion > .informacion{
   width: 56%;
@@ -1533,19 +1552,136 @@ padding: 5px;
 .NotasRelacionadas > .BloqueInformacion > .informacion > .titulo{
   width: 100%;
   height: auto;
-  font-family: "Gotham-Black";
+  font-family: "Roboto-Medium";
   font-size: 16px;
-  line-height: 16px;
+  line-height: 18px;
   margin-bottom: 20px;
 }
 
 .NotasRelacionadas > .BloqueInformacion > .informacion > .extracto{
   width: 100%;
   height: auto;
-  font-family: "Gotham-Light";
-  font-size: 12px;
-  line-height: 12px;
+  font-family: "Roboto-Light";
+  font-size: 13px;
+  line-height: 13px;
 }
+
+
+/* --------------------------------------------------------
+/* ---- BLOQUE FULL POST 
+-------------------------------------------------------- */
+
+.Bloque-Full-Post{
+  max-width: 1600px;
+  width: 100%;
+  height: 720px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  top: 80px;
+}
+
+
+.Bloque-Full-Post > .imagen-BG{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+    background-position: center center!important;
+    background-size: cover!important;
+    display: block!important;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    -o-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+
+    -webkit-filter: brightness(70%);
+  
+}
+
+.Bloque-Full-Post:hover .imagen-BG{
+    width: 105%;
+    height: 105%;
+
+    -webkit-transition: .35s ease-in-out;
+    -moz-transition: .35s ease-in-out;
+    -o-transition: .35s ease-in-out;
+    transition: .35s ease-in-out;
+    
+    -webkit-filter: brightness(100%);
+}
+
+
+.Bloque-Full-Post > .BloqueDatos{
+  width: 100%;
+  height: auto;
+  padding-left: 20px;
+  position: absolute;
+  bottom: 0;
+  z-index: 999;
+  background: rgba(0,0,0,0.7);
+}
+
+
+.Bloque-Full-Post > .BloqueDatos > .autor{
+ width: 100%;
+  height: auto;
+   font-family: "Gotham-Medium";
+  font-size: 18px;
+  line-height: 18px; 
+  margin-bottom: 20px;
+  color: #000;
+} 
+
+.Bloque-Full-Post > .BloqueDatos > .fecha{
+  width: 100%;
+  height: auto;
+  font-family: "CPMono_v07_Bold";
+  font-size: 18px;
+  line-height: 18px; 
+  margin-bottom: 20px;
+  color: #FFF;
+  text-transform: lowercase;
+} 
+
+.Bloque-Full-Post > .BloqueDatos > .fecha > span{
+   color: #CC151A;
+}
+
+
+.Bloque-Full-Post > .BloqueDatos > .titulo{
+  font-family: "Roboto-Bold";
+  font-size: 40px;
+  line-height: 40px;
+  margin-bottom: 10px;
+  color: #FFF;
+} 
+
+.Bloque-Full-Post > .BloqueDatos > .lugar{
+  font-family: "CPMono_v07_Bold";
+  font-size: 28px;
+  line-height: 28px;
+  margin-bottom: 10px;
+  color: #FFF;
+} 
+ 
+
+.Bloque-Full-Post > .BloqueDatos >  .categoria{
+  width: 100%;
+  height: auto;
+  font-family: "CPMono_v07_Bold";
+  font-size: 25px;
+  text-align: 25px;
+  color: #CC151A;
+}
+
+
 
 /* --------------------------------------------------------
 /* ---- POST LIST HOME  

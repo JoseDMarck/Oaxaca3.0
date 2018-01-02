@@ -582,7 +582,13 @@
 
 
 
+.Bloque-Full-Post  {
+    font-size: 25px;
+    line-height: 25px;
+    height: 568px;
+}
 
+ 
 
 }
 
@@ -608,7 +614,7 @@
 }
 
 .NotasRelacionadas > .BloqueInformacion > .imagen {
-    height: 180px;
+    height: 160px;
 }
 
 
@@ -835,7 +841,7 @@
 
 .NotasRelacionadas > .BloqueInformacion > .imagen{
     width: 100%;
-    height: auto;
+    height: 220px;
     float: none;
     margin-bottom: 10px;
 }
@@ -904,6 +910,20 @@
 .Bloque_GrandeF {
     width: 100% !important;
 }
+
+
+
+.Bloque-Full-Post  > .BloqueDatos  > .titulo  { 
+    font-size: 20px;
+    line-height: 20px; 
+}
+
+
+.Bloque-Full-Post{
+  height: 468px;
+}
+
+
 
 
 
