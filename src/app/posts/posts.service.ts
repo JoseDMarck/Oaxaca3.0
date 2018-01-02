@@ -209,6 +209,15 @@ private postsUrl = "http://meditarensupabra.com/demos/AudiosCDO/wp-json/wp/v2/";
   }
 
 
+  
+   // POST PARA VIDEOS
+  getPosts_videos(): Observable<Post[]> {
+      return this.http
+        .get(this.postsUrl + 'posts?categories=46&per_page=4&order=desc')
+        .map((res: Response) => res.json());
+  }
+
+
    // POST PARA ESPECTACULOS
   getPosts_espectaculos(): Observable<Post[]> {
       return this.http
