@@ -129,17 +129,34 @@
 </div><!-- header -->
 
 
+<div *ngIf="tam_bloque_visible">
+<div class="Bloque-Full-Post" *ngIf="post">
+    <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>
+
+
+   <div class="BloqueDatos">
+          <div class="categoria">{{post.post_categoria}}</div>
+          <div class="titulo">{{ post.title.rendered }}</div>
+          <div class="fecha">{{ post.post_fecha}} | por: <span> {{post.post_author}} </span> </div>      
+    </div><!-- BloqueDatos -->
+
+</div> <!-- Bloque-Full-Post -->
+</div>
+
 
 <div class="BloqueMainPost" [@fadeInAnimation]="stateName">
+
+
 <div class="contenidoPost" *ngIf="post">
   
 <!-- Imagen del post -->
  
-	<div class="Seccion-titulo">
-		 
+
+	<div class="Seccion-titulo" *ngIf="tam_bloqueC_visible">
+
 		<div class="BloqueDatos">
           <div class="categoria">{{post.post_categoria}}</div>
-			    <div class="titulo" [innerHTML]="post.title.rendered"></div>
+			    <div class="titulo">{{post.title.rendered}}</div>
                 <div class="fecha">{{ post.post_fecha}} | por: <span> {{post.post_author}} </span> </div>
                 
 		</div><!-- BloqueDatos -->
@@ -148,7 +165,7 @@
 	</div><!-- Seccion-titulo -->
 
 
-	<div class="imagenPost">
+	<div class="imagenPost"  *ngIf="tam_bloqueC_visible">
 		<img src="{{ post.imagen_minsize }}" class="img-fluid">
 	</div>
 
@@ -187,7 +204,7 @@
 	<div class="BloqueInformacion" *ngFor="let post of posts_related; let i = index; " (click)="selectPost(post.slug)">
 		
 		<div class="imagen">
-			<img src="{{ post.imagen_minsize }}">
+			  <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>
 		</div><!-- imagen -->
 
 
