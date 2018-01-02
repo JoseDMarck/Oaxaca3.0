@@ -26,7 +26,7 @@
    <div class="menuIcon" (click)="toggle2()"></div>
  
 
-   <div class="logo-simple">
+   <div class="logo-simple" (click)="GoToInicio()">
      <!-- <img src="assets/images/home/oaxacaLogo.png"> -->
      oaxacatrespuntocero.com
    </div>
@@ -62,7 +62,7 @@
 <div class="btn_Close" (click)="toggle2()"></div>
 
 
-<div class="logo">
+<div class="logo" (click)="GoToInicio()">
   <img src="assets/images/home/oaxacaLogo.png">
 </div>
 
@@ -138,9 +138,10 @@
 	<div class="Seccion-titulo">
 		 
 		<div class="BloqueDatos">
+          <div class="categoria">{{post.post_categoria}}</div>
 			    <div class="titulo" [innerHTML]="post.title.rendered"></div>
-                <div class="fecha">{{ post.post_fecha}}</div>
-                <div class="autor"> Publicado por: {{post.post_author}}</div>		
+                <div class="fecha">{{ post.post_fecha}} | por: <span> {{post.post_author}} </span> </div>
+                
 		</div><!-- BloqueDatos -->
 
 	<div style="clear: both;"></div>
@@ -161,9 +162,13 @@
  	Compartir:
  </div>
  
- <button class="facebook" ceiboShare  [facebook]="{u: repoUrl}">Facebook</button>
-<button class="twitter" ceiboShare  [twitter]="{url:repoUrl, text:TweetTitulo+', más información en el siguiente enlace: '}">Twitter</button>
-<button class="google" ceiboShare  [googlePlus]="{url:repoUrl}">Google Plus</button>
+ <div class="redesSociales">
+<i class="fa fa-facebook-square" aria-hidden="true" ceiboShare  [facebook]="{u: repoUrl}"></i>
+<i class="fa fa-twitter-square" aria-hidden="true" ceiboShare  [twitter]="{url:repoUrl, text:TweetTitulo+', más información en el siguiente enlace: '}"></i>
+<i class="fa fa-google-plus-square" aria-hidden="true" ceiboShare  [googlePlus]="{url:repoUrl}"></i>
+</div>
+
+  
 
 
 
