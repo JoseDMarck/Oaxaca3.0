@@ -60,6 +60,7 @@ export class InicioComponent implements OnInit {
   posts_espectaculos: Post[];
   posts_espectaculos_next: Post[];
   posts_en_oaxaca: Post[];
+  posts_videos: Post[];
 
 
 
@@ -211,6 +212,16 @@ dhms2(t) {
   }
 
 
+   // Videos
+  getPosts_videos(){
+    this.postsService
+      .getPosts_videos()
+      .subscribe(res => {
+        this.posts_videos = res;
+      });
+  }
+
+
   
     //ANIMACION TOGGLE
     get stateName() {
@@ -260,6 +271,7 @@ dhms2(t) {
     this.getPosts_Espectaculos();
     this.getPosts_Espectaculos_next();
     this.getPosts_en_oaxaca();
+    this.getPosts_videos();
 
 
        this.future = new Date(this.futureString);
