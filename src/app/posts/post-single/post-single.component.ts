@@ -64,6 +64,9 @@ export class PostSingleComponent implements OnInit {
   arregloCountCat:any;
   categoria:any;
   current_id:any;
+  tam_bloque: any;
+  tam_bloque_visible: boolean;
+  tam_bloqueC_visible: boolean;
   imageX:any;
   loadMoreVisible : boolean;
   selectedClass: number;
@@ -73,6 +76,8 @@ export class PostSingleComponent implements OnInit {
     this.loadMoreVisible = false;
     this.futureString = "July 1, 2018 00:00:00";
     this.post_count = 20;
+    this.tam_bloque_visible = false;
+    this.tam_bloqueC_visible = true;
       
   }
 
@@ -89,12 +94,27 @@ export class PostSingleComponent implements OnInit {
         console.log("Post", this.post)
          this.categoria = res[0].categories;
          this.current_id = res[0].id;
-         this.slugArray = res[0].slug
-         this.TweetTitulo = res[0].title.rendered
-         console.log("CATEGORIA", this.categoria)
-         console.log("CURRENT ID", this.current_id)
+         this.slugArray = res[0].slug;
+         this.TweetTitulo = res[0].title.rendered;
+         this.tam_bloque = res[0].tamano_bloque;
+         console.log("CATEGORIA", this.categoria);
+         console.log("CURRENT ID", this.current_id);
+         console.log("TAMAÑO BLOQUE", this.tam_bloque);
          this.getPostRelated(this.categoria, this.current_id);
          this.repoUrl = 'http://michoacantrespuntocero.com/2018elecciones.com/posts-redes/'+this.slugArray;
+
+
+         if(this.tam_bloque != "" ){
+          this.tam_bloque_visible = true;
+           this.tam_bloqueC_visible = false;
+          console.log("this.tam_bloque_visible ", this.tam_bloque_visible );
+
+
+        } else{
+           this.tam_bloque_visible = false;
+           this.tam_bloqueC_visible = true;
+          console.log("this.tam_bloque_visible ", this.tam_bloque_visible );
+        }
    
       });
   }
@@ -171,6 +191,10 @@ export class PostSingleComponent implements OnInit {
      this.router.navigate(["publicaciones-"+slug]);
   }
 
+
+   getBackground(image) {
+    return this.sanitizer.bypassSecurityTrustStyle(`linear-gradient(rgba(29, 29, 29, 0), rgba(16, 16, 23, 0.5)), url(${image})`);
+}
 
   selectPost(slug) {
    this.router.navigate([slug]);
