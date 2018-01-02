@@ -24,7 +24,7 @@
    <div class="menuIcon" (click)="toggle2()"></div>
  
 
-   <div class="logo-simple">
+   <div class="logo-simple" (click)="GoToInicio()">
      <!-- <img src="assets/images/home/oaxacaLogo.png"> -->
      oaxacatrespuntocero.com
    </div>
@@ -340,6 +340,34 @@
 
   <div style="clear: both;"></div>
   </div><!-- BloqueSeccionOX -->
+
+
+ <!-- ==================  VIDEO SECCION ================== -->
+  <div class="video-Seccion">
+    
+    <div class="titulo-Secciones">Videos</div>
+    <div style="clear: both;"></div> 
+
+      <div class="inner">
+        <div class="Bloques" *ngFor="let post of posts_videos; let i = index; " (click)="selectPost(post.slug)">
+          <div class="playIconVideos"></div>
+          <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>
+
+          <div class="informacion">
+            {{ post.title.rendered }}
+          </div><!-- informacion -->
+
+
+        </div>
+         
+         <div style="clear: both;"></div>
+      </div><!-- inner -->
+
+     
+      <div style="clear: both;"></div> 
+ 
+  </div><!-- video-seccion -->
+
 
 
   <!-- ==================  SECCION EN OAXACA ================== -->
