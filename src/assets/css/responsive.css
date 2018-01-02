@@ -729,6 +729,11 @@
     width: 100%;
 }
 
+.video-Seccion > .inner > .Bloques{
+  width: 50%;
+}
+
+
 }
 
 /* --------------------------------------------------------
@@ -974,6 +979,12 @@
 
 .titulo-Secciones  {
     width: 90%;    
+}
+
+
+.video-Seccion > .inner > .Bloques{
+  width: 100%;
+  border-right: solid 0px rgba(0, 0, 0, 0);
 }
 
 
