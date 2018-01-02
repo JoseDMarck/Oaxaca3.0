@@ -739,6 +739,10 @@
   width: 50%;
 }
 
+.footer > .contenedor > .bloques {
+    width: 25%;
+}
+
 
 }
 
@@ -924,6 +928,10 @@
 }
 
 
+.footer > .contenedor > .bloques {
+    width: 33.33%;
+}
+
 
 
 
@@ -1005,6 +1013,11 @@
 .video-Seccion > .inner > .Bloques{
   width: 100%;
   border-right: solid 0px rgba(0, 0, 0, 0);
+}
+
+
+.footer > .contenedor > .bloques {
+    width: 50%;
 }
 
 
@@ -1092,8 +1105,13 @@
 }
 
 
+.footer > .contenedor > .bloques {
+    width: 80%;
+}
 
-
+.logo-F{
+  width: 10%;
+}
 
 }
 
