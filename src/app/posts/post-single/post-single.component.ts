@@ -4,6 +4,8 @@ import { PostsService } from '../posts.service';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { trigger, state, style, animate,transition } from '@angular/animations';
 import { DomSanitizer } from '@angular/platform-browser';
+import { FacebookService, InitParams } from 'ngx-facebook';
+
 
 
 
@@ -71,13 +73,23 @@ export class PostSingleComponent implements OnInit {
   loadMoreVisible : boolean;
   selectedClass: number;
  
- constructor(private postsService: PostsService,  private router: Router,  private route: ActivatedRoute, private sanitizer: DomSanitizer) { 
+ constructor(private postsService: PostsService,  private router: Router,  private route: ActivatedRoute, private sanitizer: DomSanitizer, private fb: FacebookService) { 
    this.arregloCountCat = [];
     this.loadMoreVisible = false;
     this.futureString = "July 1, 2018 00:00:00";
     this.post_count = 20;
     this.tam_bloque_visible = false;
     this.tam_bloqueC_visible = true;
+   
+
+    let initParams: InitParams = {
+      appId: '779346622261275',
+      xfbml: true,
+      version: 'v2.11'
+    };
+
+    fb.init(initParams);
+
       
   }
 
