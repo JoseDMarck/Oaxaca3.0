@@ -53,6 +53,37 @@ body{
 
 
 
+
+
+.flexcroll-Menu::-webkit-scrollbar {
+    width: 0px;
+}
+
+.flexcroll-Menu{
+    scrollbar-face-color: #CB3237 !important;
+    scrollbar-shadow-color: #CB3237 !important;
+    scrollbar-highlight-color: #CB3237 !important;
+    scrollbar-3dlight-color: #CB3237 !important;
+    scrollbar-darkshadow-color: #CB3237 !important;
+    scrollbar-track-color: #CB3237 !important;
+    scrollbar-arrow-color: #CB3237 !important;
+}
+
+
+.flexcroll-Menu::-webkit-scrollbar-track {
+    -webkit-box-shadow:  inset 0 0 6px rgba(0,0,0,0.1) !important; 
+    -webkit-border-radius: 15px !important;
+    border-radius: 15px !important;
+}
+ 
+/* Handle */
+.flexcroll-Menu::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 15px !important;
+    background: #CB3237 !important;
+}
+
+
+
  
 
 
@@ -305,7 +336,7 @@ body{
   background: #000;
   padding-top: 40px;
   overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: scroll;
   display: block;
   background: #FFF;
 
@@ -327,7 +358,7 @@ body{
   padding-left: 20px;
   font-size: 22px;
   text-align: left;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   color: #000;
   cursor: pointer;
   text-align: center;
@@ -446,12 +477,15 @@ color: #D20417;
 .Menu-Activo-Movil > .redesSociales{
   width: 100%;
   height: auto;
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
   bottom: 0px;
   margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
   font-size: 20px;
+  background: #FFF;
 }
 
 .Menu-Activo-Movil > .redesSociales a{
@@ -470,6 +504,39 @@ color: #D20417;
 -moz-transition: all 0.3s ease;
 -o-transition: all 0.3s ease;
 -ms-transition: all 0.3s ease;
+}
+
+
+.contenedor-datos{
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contenedor-datos > .bloques{
+  width: 100%;
+  height: auto;
+  padding-left: 20px;
+  margin-bottom: 0px;
+  font-family: "CPMono_v07_Bold";
+  font-size: 13px;
+  color: #000;
+  text-align: center;
+     -webkit-transition: all 0.3s ease;
+-moz-transition: all 0.3s ease;
+-o-transition: all 0.3s ease;
+-ms-transition: all 0.3s ease;
+cursor: pointer;
+}
+
+
+.contenedor-datos > .bloques:hover{
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  color: #D20417;
 }
 
 /* --------------------------------------------------------
@@ -705,6 +772,13 @@ color: #D20417;
   margin-bottom: 30px;
   z-index: 9999;
   position: relative;
+}
+
+.titulo-Secciones-full{
+  width: 100% !important; 
+  margin: 0 auto !important;
+  margin-bottom: 30px !important;
+  text-align: center !important;
 }
 
  
@@ -1873,7 +1947,7 @@ filter: grayscale(0%);
 }
 
 .footer > .contenedor{
-  max-width: 1020px;
+  max-width: 1120px;
   width: 100%;
   height: auto;
   margin: 0 auto;
@@ -1881,13 +1955,13 @@ filter: grayscale(0%);
 
 
 .footer > .contenedor > .bloques{
-  width: 20%;
+  width: 16.66%;
   height: 64px;
   float: left;
   text-align: center;
   color: #FFF;
   font-family: "Roboto-Light";
-  font-size: 14px;
+  font-size: 12px;
   position: relative;
   top: 20px;
   cursor: pointer;
