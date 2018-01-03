@@ -181,12 +181,26 @@
 	 <div [innerHTML]="sanitizer.bypassSecurityTrustHtml(post.content.rendered)" class="Post_Redered"></div> 
 	 <!--<div [innerHTML]="post.content.rendered" class="Post_Redered"></div> -->
  
+ <div class="ComentariosFacebook">
+  Regalanos tu Comentario   
+
+  
+  fb 1
+  <fb-comments href="{{post.link}}"></fb-comments>
+  
+  fb 2
+  <fb-comment-embed href="https://developers.facebook.com/docs/plugins/comments#configurator" width="500"></fb-comment-embed>
  
+
+ </div>
+
+
  <div class="CompartirTexto">
  	Compartir:
  </div>
  
  <div class="redesSociales">
+  
 <i class="fa fa-facebook-square" aria-hidden="true" ceiboShare  [facebook]="{u: repoUrl}"></i>
 <i class="fa fa-twitter-square" aria-hidden="true" ceiboShare  [twitter]="{url:repoUrl, text:TweetTitulo+', más información en el siguiente enlace: '}"></i>
 <i class="fa fa-google-plus-square" aria-hidden="true" ceiboShare  [googlePlus]="{url:repoUrl}"></i>
