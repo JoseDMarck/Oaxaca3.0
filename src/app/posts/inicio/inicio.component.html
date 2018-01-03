@@ -55,7 +55,7 @@
   
 </div><!-- menuMovil -->
 
-<div class="Menu-Activo-Movil" [@heroState2]="stateName2" >
+<div class="Menu-Activo-Movil flexcroll-Menu" [@heroState2]="stateName2" >
 
 <div class="btn_Close" (click)="toggle2()"></div>
 
@@ -69,31 +69,33 @@
   Inicio
 </div>
 
-<div class="Bloques">
+<div class="Bloques" (click)="SeleccionMenu('noticias')">
   Noticias
 </div>
 
-<div class="Bloques">
+<div class="Bloques" (click)="SeleccionMenu('glamour')">
   Glamour
 </div>
 
-<div class="Bloques">
+<div class="Bloques" (click)="SeleccionMenu('internet')">
   Internet
 </div>
 
-<div class="Bloques">
+<div class="Bloques" (click)="SeleccionMenu('deportes')">
   Deportes
 </div>
 
-<div class="Bloques">
+<div class="Bloques" (click)="SeleccionMenu('espectaculos')">
   Espectáculos
 </div>
 
-<div class="Bloques">
-  En Oaxaca
+<div class="Bloques" (click)="SeleccionMenu('videos')">
+  Videos
 </div>
 
-
+<div class="Bloques" (click)="SeleccionMenu('oaxaca')">
+  En Oaxaca
+</div>
 
 
 <div class="redesSociales">
@@ -114,6 +116,21 @@
   </a>
 
 </div><!-- redesSociales -->
+
+
+
+<div class="contenedor-datos">
+      <div class="bloques">© 2018 Derechos reservados.</div>
+      <div class="bloques">Quiénes somos</div>
+      <div class="bloques">Términos y condiciones</div>
+      <div class="bloques">Políticas de privacidad</div>
+      <div class="bloques">Directorio</div>
+      <div class="bloques">Publicidad</div>
+  </div>
+
+
+
+
 
 
 </div><!--Menu-Activo-Movil -->
@@ -277,7 +294,7 @@
           </div>
 
           <div class="titulo">
-            <span class="SizeSpan-{{i+1}}">
+            <span class="SizeSpan-2">
             {{ post.title.rendered }}
           </span>
           </div>
@@ -387,7 +404,7 @@
           </div>
 
           <div class="titulo">
-            <span class="SizeSpan-{{i+1}}">
+            <span class="SizeSpan-2">
             {{ post.title.rendered }}
           </span>
           </div>
