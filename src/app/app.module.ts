@@ -8,22 +8,16 @@ import { HttpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { PostListComponent } from './posts/post-list/post-list.component';
 import { Wpng2RoutingModule } from './app-routing.module';
 import { PostSingleComponent } from './posts/post-single/post-single.component';
-import { PostSingleNormalComponent } from './posts/post-single-normal/post-single-normal.component';
-import { ExposicionesComponent  } from './posts/exposiciones/exposiciones.component';
-import { ConferenciasComponent  } from './posts/conferencias/conferencias.component';
 import { InicioComponent } from './posts/inicio/inicio.component';
-import { EntranaComponent } from './posts/entrana/entrana.component';
-import { AsiPasoComponent } from './posts/asi-paso/asi-paso.component';
-import { DondeDiceComponent } from './posts/donde-dice/donde-dice.component';
-import { QueMePerdiComponent } from './posts/que-me-perdi/que-me-perdi.component';
-import { QueProponenComponent } from './posts/que-proponen/que-proponen.component';
-import { QueSeVieneComponent  } from './posts/que-se-viene/que-se-viene.component';
-import { QuienJalaComponent  } from './posts/quien-jala/quien-jala.component';
-import { ContadorComponent } from './posts/contador/contador.component';
-import { ContadorMovilComponent } from './posts/contador-movil/contador-movil.component';
+import { NoticiasComponent  } from './posts/noticias/noticias.component';
+import { GlamourComponent  } from './posts/glamour/glamour.component';
+import { InternetComponent  } from './posts/internet/internet.component';
+import { DeportesComponent  } from './posts/deportes/deportes.component';
+import { EspectaculosComponent  } from './posts/espectaculos/espectaculos.component';
+import { VideosComponent  } from './posts/videos/videos.component';
+import { OaxacaComponent  } from './posts/oaxaca/oaxaca.component';
 
 
 import {ShareModule} from 'ng2share/share.module'
@@ -35,30 +29,19 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 
 
-
-  
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
-    PostListComponent,
     PostSingleComponent,
-    PostSingleNormalComponent,
     MenuGeneralComponent,
     InicioComponent,
-    ExposicionesComponent,
-    ConferenciasComponent,
-    EntranaComponent,
-    AsiPasoComponent,
-    DondeDiceComponent,
-    QueMePerdiComponent,
-    QueProponenComponent,
-    QueSeVieneComponent,
-    QuienJalaComponent, 
-    ContadorComponent,
-    ContadorMovilComponent,
+    NoticiasComponent,
+    GlamourComponent,  
+    InternetComponent, 
+    DeportesComponent,
+    EspectaculosComponent, 
+    VideosComponent,
+    OaxacaComponent,
     CeiboShare
   ],
   imports: [

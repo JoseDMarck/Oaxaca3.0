@@ -1,72 +1,58 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PostListComponent } from './posts/post-list/post-list.component';
 import { PostSingleComponent } from './posts/post-single/post-single.component';
-import { PostSingleNormalComponent } from './posts/post-single-normal/post-single-normal.component';
-import { EntranaComponent } from './posts/entrana/entrana.component';
 import { InicioComponent } from './posts/inicio/inicio.component';
-import { AsiPasoComponent } from './posts/asi-paso/asi-paso.component';
-import { DondeDiceComponent } from './posts/donde-dice/donde-dice.component';
-import { QueMePerdiComponent } from './posts/que-me-perdi/que-me-perdi.component';
-import { QueProponenComponent } from './posts/que-proponen/que-proponen.component';
-import { QueSeVieneComponent  } from './posts/que-se-viene/que-se-viene.component';
-import { QuienJalaComponent  } from './posts/quien-jala/quien-jala.component';
-
+import { NoticiasComponent  } from './posts/noticias/noticias.component';
+import { GlamourComponent  } from './posts/glamour/glamour.component';
+import { InternetComponent  } from './posts/internet/internet.component';
+import { DeportesComponent  } from './posts/deportes/deportes.component';
+import { EspectaculosComponent  } from './posts/espectaculos/espectaculos.component';
+import { VideosComponent  } from './posts/videos/videos.component';
+import { OaxacaComponent  } from './posts/oaxaca/oaxaca.component';
 
 
 
 
 const routes: Routes = [
-  
- 
   {
-    path: 'publicaciones-entrana',
-    component: EntranaComponent,
-    pathMatch: 'full'
-  },
-
-  {
-    path: 'publicaciones-asi-paso',
-    component: AsiPasoComponent,
-    pathMatch: 'full'
-  },
-  
-  {
-    path: 'publicaciones-donde-dice',
-    component: DondeDiceComponent,
+    path: 'publicaciones-noticias',
+    component: NoticiasComponent ,
     pathMatch: 'full'
   },
   {
-    path: 'publicaciones-que-me-perdi',
-    component: QueMePerdiComponent,
+    path: 'publicaciones-glamour',
+    component: GlamourComponent ,
     pathMatch: 'full'
   },
   {
-    path: 'publicaciones-que-proponen',
-    component: QueProponenComponent,
+    path: 'publicaciones-internet',
+    component: InternetComponent ,
     pathMatch: 'full'
   },
   {
-    path: 'publicaciones-que-se-viene',
-    component: QueSeVieneComponent,
+    path: 'publicaciones-deportes',
+    component: DeportesComponent ,
     pathMatch: 'full'
   },
   {
-    path: 'publicaciones-quien-jala',
-    component: QuienJalaComponent,
+    path: 'publicaciones-espectaculos',
+    component: EspectaculosComponent ,
     pathMatch: 'full'
   },
-
-
+  {
+    path: 'publicaciones-videos',
+    component: VideosComponent,
+    pathMatch: 'full'
+  },
+  {
+    path: 'publicaciones-oaxaca',
+    component: OaxacaComponent,
+    pathMatch: 'full'
+  },
   {
     path: ':slug',
     component: PostSingleComponent
   },
-  {
-    path: 'publicaciones/:slug',
-    component: PostSingleNormalComponent
-  },
-
   {
     path: '',
     component: InicioComponent,
