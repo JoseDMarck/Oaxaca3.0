@@ -99,6 +99,11 @@
   En Oaxaca
 </div>
 
+ <div class="Bloques">Quiénes somos</div>
+
+ <div class="Bloques">Directorio</div>
+
+ <div class="Bloques">Publicidad</div>
 
 <div class="redesSociales">
   <a href="https://www.facebook.com" target="_blank">
@@ -118,19 +123,7 @@
   </a>
 
 </div><!-- redesSociales -->
-
-
-
-<div class="contenedor-datos">
-      <div class="bloques">© 2018 Derechos reservados.</div>
-      <div class="bloques">Quiénes somos</div>
-      <div class="bloques">Términos y condiciones</div>
-      <div class="bloques">Políticas de privacidad</div>
-      <div class="bloques">Directorio</div>
-      <div class="bloques">Publicidad</div>
-  </div>
-
-
+ 
 
 </div><!--Menu-Activo-Movil -->
 
@@ -223,8 +216,9 @@
 
 
 		<div class="informacion">
+      <div class="categoria">{{post.post_categoria}}</div>
 			<div class="titulo" [innerHTML]="post.title.rendered"></div>
-			<div [innerHTML]="post.custom_extracto" class="extracto"></div>
+			 <div  class="extracto">{{post.custom_extracto}}</div>
 
 		</div><!-- información -->
 
