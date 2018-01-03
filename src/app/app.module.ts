@@ -20,12 +20,14 @@ import { VideosComponent  } from './posts/videos/videos.component';
 import { OaxacaComponent  } from './posts/oaxaca/oaxaca.component';
 
 
+
 import {ShareModule} from 'ng2share/share.module'
 
 import { MenuGeneralComponent } from './posts/menu-general/menu-general.component';
 import { RouterModule } from '@angular/router';
 import { CeiboShare } from 'ng2-social-share';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { FacebookModule } from 'ngx-facebook';
 
 
 
@@ -51,6 +53,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     Wpng2RoutingModule,
     ShareModule,
     InfiniteScrollModule,
+    FacebookModule.forRoot(),
     BrowserAnimationsModule
   ],
   providers: [Title],
