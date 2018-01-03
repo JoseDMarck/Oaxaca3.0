@@ -36,17 +36,6 @@ import { Observable, Subscription } from 'rxjs/Rx';
 export class InicioComponent implements OnInit {
 
 
-    private future: Date;
-    private futureString: string;
-    private diff: number;
-    private $counter: Observable<number>;
-    private $counter2: Observable<number>;
-    private subscription: Subscription;
-    private subscription2: Subscription;
-    private dias: string;
-    private horas_minutos: string;
-
-
   show = false;  
   show2 = false;  
   posts_Home: Post[];
@@ -78,42 +67,10 @@ export class InicioComponent implements OnInit {
   constructor(private postsService: PostsService, private router: Router,  private sanitizer: DomSanitizer, elm: ElementRef) { 
     this.arregloCountCat = [];
     this.loadMoreVisible = false;
-    this.futureString = "July 1, 2018 00:00:00";
     this.post_count = 20;
 
    
   }
-
-
-dhms(t) {
-        var days, hours, minutes, seconds;
-        days = Math.floor(t / 86400);
-        t -= days * 86400;
-         
-
-        return [
-            days,
-        ].join(' ');
-    }
-
-
-dhms2(t) {
-         var days, hours, minutes, seconds;
-        days = Math.floor(t / 86400);
-        t -= days * 86400;
-        hours = Math.floor(t / 3600) % 24;
-        t -= hours * 3600;
-        minutes = Math.floor(t / 60) % 60;
-        t -= minutes * 60;
-        seconds = t % 60;
-
-
-        return [ 
-            hours + ' h',
-            minutes + ' m'
-
-        ].join(' ');
-    }
 
 
 
@@ -254,9 +211,6 @@ dhms2(t) {
 
    ngOnDestroy() {
      console.log("Destroy*******");
-     this.subscription.unsubscribe();
-     this.subscription2.unsubscribe();
-
   }
 
 
@@ -273,21 +227,6 @@ dhms2(t) {
     this.getPosts_en_oaxaca();
     this.getPosts_videos();
 
-
-       this.future = new Date(this.futureString);
-        
-        this.$counter = Observable.interval(1000).map((x) => {
-            this.diff = Math.floor((this.future.getTime() - new Date().getTime()) / 1000);
-            return x;
-        });
-
-        this.$counter2 = Observable.interval(1000).map((x) => {
-            this.diff = Math.floor((this.future.getTime() - new Date().getTime()) / 1000);
-            return x;
-        });
-
-        this.subscription = this.$counter.subscribe((x) => this.dias = this.dhms(this.diff));
-        this.subscription2 = this.$counter2.subscribe((x) => this.horas_minutos = this.dhms2(this.diff));
   }
 
 
@@ -333,7 +272,7 @@ onScroll () {
  }
 
 
- getBackground(image) {
+getBackground(image) {
     return this.sanitizer.bypassSecurityTrustStyle(`linear-gradient(rgba(29, 29, 29, 0), rgba(16, 16, 23, 0.5)), url(${image})`);
 }
 
