@@ -743,6 +743,15 @@
 }
 
 
+.contenedorBuscar  {
+    width: 120px;
+    height: 30px;
+    position: absolute;
+    right: 160px;
+    top: 0px;
+}
+
+
 }
 
 /* --------------------------------------------------------
@@ -799,9 +808,32 @@
   height: 340px;
 }
 
+.logo-simple {
+  top: 17px;
+  font-size: 14px;
+}
+
+
 }/* 900 */
 
 
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 568px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:580px) {
+
+.logo-simple{
+  display: none;
+}
+
+.contenedorBuscar {
+  width: 160px;
+}
+
+}
 
 /* --------------------------------------------------------
 /* ---- Responsive: 568px
@@ -932,6 +964,10 @@
 }
 
 
+
+.contenedorBuscar {
+    right: 132px;
+}
 
 
 }/* 568 */
@@ -1096,7 +1132,7 @@
 @media only screen and (max-width:430px) {
   
   .redes-header  {
-    top: 35px;
+    top: 12px;
   }
 
 .Menu-Activo-Movil {
@@ -1180,6 +1216,9 @@
   height: 400px;
 }
 
+.contenedorBuscar{
+    width: 100px;
+}
 
 
 }
