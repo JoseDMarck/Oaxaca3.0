@@ -1,5 +1,5 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, Injectable, Pipe, PipeTransform  } from '@angular/core';
 
 
 
@@ -18,18 +18,17 @@ import { DeportesComponent  } from './posts/deportes/deportes.component';
 import { EspectaculosComponent  } from './posts/espectaculos/espectaculos.component';
 import { VideosComponent  } from './posts/videos/videos.component';
 import { OaxacaComponent  } from './posts/oaxaca/oaxaca.component';
-
-
-
 import {ShareModule} from 'ng2share/share.module'
-
 import { MenuGeneralComponent } from './posts/menu-general/menu-general.component';
 import { RouterModule } from '@angular/router';
 import { CeiboShare } from 'ng2-social-share';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { FacebookModule } from 'ngx-facebook';
+import { Ng2SearchPipeModule } from 'ng2-search-filter-master';
 
+ 
 
+ 
 
 @NgModule({
   declarations: [
@@ -53,6 +52,7 @@ import { FacebookModule } from 'ngx-facebook';
     Wpng2RoutingModule,
     ShareModule,
     InfiniteScrollModule,
+    Ng2SearchPipeModule,
     FacebookModule.forRoot(),
     BrowserAnimationsModule
   ],

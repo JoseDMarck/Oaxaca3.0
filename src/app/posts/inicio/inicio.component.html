@@ -21,6 +21,8 @@
 
   <div class="menu">
  
+
+ 
    <div class="menuIcon" (click)="toggle2()"></div>
  
 
@@ -45,6 +47,30 @@
     <a href="https://www.youtube.com/" target="_blank">
       <i class="fa fa-youtube-play" aria-hidden="true"></i>
     </a>
+
+
+<div class="contenedorBuscar" *ngIf="SearchReady">
+   <input class="form-control" type="text" name="search" placeholder="Buscar..." [(ngModel)]="filter" (click)="openSearch()">     
+
+   <div class="iconoBuscar">
+     <i class="fa fa-search" aria-hidden="true"></i>
+   </div><!-- iconoBuscar -->
+
+<div class="ContenedorFintrado flexcroll-Menu" [@heroState3]="stateName3">
+        <div class="btn_Close" (click)="closeSearch()"></div>
+        <div style="clear: both;"></div>
+      <div class="bloques" *ngFor="let post of posts_search_full | filter:filter; let i = index " (click)="selectPost(post.slug)">
+      
+            {{ post.title.rendered }} 
+      </div>
+</div><!-- ContenedorFintrado -->
+
+</div><!-- ContenedorBuscar -->
+
+
+ 
+
+
 
 </div><!-- redesSociales -->
 
@@ -103,6 +129,9 @@
 
  <div class="Bloques">Publicidad</div>
 
+
+
+
 <div class="redesSociales">
   <a href="https://www.facebook.com" target="_blank">
     <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -137,8 +166,18 @@
 
   <div class="Listado" [@fadeInAnimation]="stateName">
 
+
+      
+     
+
+  
+
 <!-- ==================  SECCION PRINCIPALES ================== -->
    <div class="BloqueSeccionOX">
+
+   
+
+
     <div class="titulo-Secciones">Noticias Principales</div>
     <div style="clear: both;"></div> 
   

@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, Injectable, Pipe, PipeTransform } from '@angular/core';
 import { Post } from '../post';
 import { PostsService } from '../posts.service';
 import { Router } from '@angular/router';
@@ -27,17 +27,32 @@ import { Observable, Subscription } from 'rxjs/Rx';
     state('active',   style({transform: 'translateX(-100%) '})),
     
     transition('inactive => active', animate('400ms ease-in')),
-    transition('active => inactive', animate('200ms ease-out')),
-     
-  ])
+    transition('active => inactive', animate('200ms ease-out')), 
+    ]),
+
+    trigger('heroState3', [
+    state('inactive', style({transform: 'translateY(0)'})),
+    state('active',   style({transform: 'translateY(-200%) '})),
+    
+    transition('inactive => active', animate('400ms ease-in')),
+    transition('active => inactive', animate('200ms ease-out')), 
+    ]),
+
+
+
   ],
   providers: [PostsService]
 })
-export class InicioComponent implements OnInit {
 
+ 
+export class InicioComponent implements OnInit     {
+ 
+ 
 
   show = false;  
   show2 = false;  
+  show3 = false;  
+
   posts_Home: Post[];
   posts: Post[];
   posts_principales: Post[];
@@ -50,6 +65,7 @@ export class InicioComponent implements OnInit {
   posts_espectaculos_next: Post[];
   posts_en_oaxaca: Post[];
   posts_videos: Post[];
+  posts_search_full: Post[];
 
 
 
@@ -59,7 +75,10 @@ export class InicioComponent implements OnInit {
   arregloCountCat:any;
   imageX:any;
   loadMoreVisible : boolean;
+  SearchReady : boolean;
   selectedClass: number;
+
+ 
 
 
  
@@ -68,6 +87,7 @@ export class InicioComponent implements OnInit {
     this.arregloCountCat = [];
     this.loadMoreVisible = false;
     this.post_count = 20;
+    this.SearchReady = false;
 
    
   }
@@ -84,6 +104,17 @@ export class InicioComponent implements OnInit {
          //this.imageX = this.sanitizer.bypassSecurityTrustStyle(`url(${element.image})`);
       });
   }
+
+  //Search Full
+  getPosts_SearchFull(){
+    this.postsService
+      .getPostsSearchFull()
+      .subscribe(res => {
+        this.posts_search_full = res;
+        this.SearchReady = true
+      });
+  }
+
 
 
   // Principales
@@ -199,6 +230,22 @@ export class InicioComponent implements OnInit {
     }
 
 
+
+    get stateName3() {
+        return this.show3 ? 'inactive' : 'active'
+    }
+
+    openSearch() {
+        this.show3 = true;
+         console.log("this.show", this.show3)
+    }
+
+    closeSearch() {
+        this.show3 = false;
+         console.log("this.show", this.show3)
+    }
+
+
   ngAfterViewInit() {
    
    console.log("estoy  en ngAfterViewInit")
@@ -226,6 +273,8 @@ export class InicioComponent implements OnInit {
     this.getPosts_Espectaculos_next();
     this.getPosts_en_oaxaca();
     this.getPosts_videos();
+    this.getPosts_SearchFull();
+    console.log("SearchReady", this.SearchReady);
 
   }
 
@@ -234,7 +283,6 @@ export class InicioComponent implements OnInit {
 	 this.router.navigate([slug]);
    console.log("Slug normal", slug)
 }
-
 
 
 
