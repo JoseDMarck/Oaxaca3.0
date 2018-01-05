@@ -82,14 +82,7 @@ export class PostSingleComponent implements OnInit {
     this.tam_bloqueC_visible = true;
    
 
-    let initParams: InitParams = {
-      appId: '779346622261275',
-      xfbml: true,
-      version: 'v2.11'
-    };
-
-    fb.init(initParams);
-
+    
       
   }
 
