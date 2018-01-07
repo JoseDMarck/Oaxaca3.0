@@ -49,7 +49,7 @@ export class BusquedaComponent implements OnInit {
   show = false;  
   show2 = false;  
   show3 = false; 
- posts_Home: Post[];
+  posts_Home: Post[];
   posts: Post[];
   posts_principales: Post[];
   posts_glamour: Post[];
@@ -77,6 +77,7 @@ export class BusquedaComponent implements OnInit {
  
 
 
+
  
 
   constructor(private postsService: PostsService, private router: Router,  private sanitizer: DomSanitizer, elm: ElementRef) { 
@@ -89,18 +90,9 @@ export class BusquedaComponent implements OnInit {
   }
 
 
+ 
 
-  getPosts_Home(){
-    this.postsService
-      .getPostsHome()
-      .subscribe(res => {
-        this.posts = res;
-
-        console.log(this.posts)
-         //this.imageX = this.sanitizer.bypassSecurityTrustStyle(`url(${element.image})`);
-      });
-  }
-
+   
   //Search Full
   getPosts_SearchFull(){
     this.postsService
@@ -113,99 +105,12 @@ export class BusquedaComponent implements OnInit {
 
 
 
-  // Principales
-  getPosts_Principales(){
-    this.postsService
-      .getPosts_principales()
-      .subscribe(res => {
-        this.posts_principales = res;
-      });
-  }
-
-  // Glamour
-  getPosts_Glamour(){
-    this.postsService
-      .getPosts_glamour()
-      .subscribe(res => {
-        this.posts_glamour = res;
-      });
-  }
-
-  getPosts_Glamour_next(){
-    this.postsService
-      .getPosts_glamour_next()
-      .subscribe(res => {
-        this.posts_glamour_next = res;
-      });
-  }
+   
+ 
 
 
-  // Internet
-  getPosts_Internet(){
-    this.postsService
-      .getPosts_internet()
-      .subscribe(res => {
-        this.posts_internet = res;
-      });
-  }
-
-  getPosts_Internet_next(){
-    this.postsService
-      .getPosts_internet_next()
-      .subscribe(res => {
-        this.posts_internet_next = res;
-      });
-  }
-
-
-  // Deportes
-  getPosts_Deportes(){
-    this.postsService
-      .getPosts_deportes()
-      .subscribe(res => {
-        this.posts_deportes = res;
-      });
-  }
-
-
-  // Internet
-  getPosts_Espectaculos(){
-    this.postsService
-      .getPosts_espectaculos()
-      .subscribe(res => {
-        this.posts_espectaculos = res;
-      });
-  }
-
-  getPosts_Espectaculos_next(){
-    this.postsService
-      .getPosts_espectaculos_next()
-      .subscribe(res => {
-        this.posts_espectaculos_next = res;
-      });
-  }
-
-
-  // En Oaxaca
-  getPosts_en_oaxaca(){
-    this.postsService
-      .getPosts_en_oaxaca()
-      .subscribe(res => {
-        this.posts_en_oaxaca = res;
-      });
-  }
-
-
-   // Videos
-  getPosts_videos(){
-    this.postsService
-      .getPosts_videos()
-      .subscribe(res => {
-        this.posts_videos = res;
-      });
-  }
-
-
+  
+ 
   
     //ANIMACION TOGGLE
     get stateName() {
@@ -259,16 +164,6 @@ export class BusquedaComponent implements OnInit {
 
   ngOnInit() {
 
-    this.getPosts_Principales();
-    this.getPosts_Glamour();
-    this.getPosts_Glamour_next();
-    this.getPosts_Internet();
-    this.getPosts_Internet_next();
-    this.getPosts_Deportes();
-    this.getPosts_Espectaculos();
-    this.getPosts_Espectaculos_next();
-    this.getPosts_en_oaxaca();
-    this.getPosts_videos();
     this.getPosts_SearchFull();
     console.log("SearchReady", this.SearchReady);
 
