@@ -9,6 +9,10 @@ import { DeportesComponent  } from './posts/deportes/deportes.component';
 import { EspectaculosComponent  } from './posts/espectaculos/espectaculos.component';
 import { VideosComponent  } from './posts/videos/videos.component';
 import { OaxacaComponent  } from './posts/oaxaca/oaxaca.component';
+import { BusquedaComponent } from './posts/busqueda/busqueda.component';
+import { MenuGeneralComponent } from './posts/menu-general/menu-general.component';
+
+
 
 
 
@@ -50,9 +54,22 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'busqueda',
+    component: BusquedaComponent,
+    pathMatch: 'full'
+  },
+
+   {
+    path: 'menu',
+    component: MenuGeneralComponent ,
+    pathMatch: 'full'
+  },
+  {
     path: ':slug',
     component: PostSingleComponent
   },
+
+  
   {
     path: '',
     component: InicioComponent,
