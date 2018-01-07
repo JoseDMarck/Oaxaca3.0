@@ -292,6 +292,10 @@ GoToInicio() {
     console.log("Go to Inicio")
 }
 
+GoToBusqueda() {
+ this.router.navigate(["busqueda"]);
+}
+
 
  
 onScroll () {
