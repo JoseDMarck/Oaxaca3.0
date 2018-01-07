@@ -138,15 +138,12 @@ export class PostSingleComponent implements OnInit {
 
 
   ngOnInit() {
-   
-
   	this.route.params.forEach((params: Params) => {
        let slug = params['slug'];
-       this.getPost(slug)
-    });
+       this.getPost(slug);
+         window.scrollTo(0, 0);
 
-
-         
+    });         
   }
 
 
