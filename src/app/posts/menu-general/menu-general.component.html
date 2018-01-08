@@ -31,7 +31,7 @@
   <div class="redes-header">
 
 
-     <i class="fa fa-search busquedaIcon" aria-hidden="true" (click)="toggle3()"></i>
+     <i class="fa fa-search " aria-hidden="true" (click)="toggle3()" *ngIf="SearchReady" ></i>
 
     <a href="https://www.facebook.com" target="_blank">
       <i class="fa fa-facebook" aria-hidden="true"></i>
@@ -56,20 +56,22 @@
 
 
 <div class="contenedorBuscar" *ngIf="SearchReady" [@heroState4]="stateName4">
+
+
    <input class="form-control" type="text" name="search" placeholder="Buscar..." [(ngModel)]="filter" (click)="openSearch()">     
 
-   <div class="iconoBuscar busquedaIcon2" (click)="GoToBusqueda()" >
-     <i class="fa fa-search" aria-hidden="true"></i>
-   </div><!-- iconoBuscar -->
+ 
 
 <div class="ContenedorFintrado flexcroll-Menu" [@heroState3]="stateName3">
         <div class="btn_Close" (click)="closeSearch()"></div>
         <div style="clear: both;"></div>
+        <div class="bloques"  (click)="GoToBusqueda()">Ir a página de busqueda</div>
       <div class="bloques" *ngFor="let post of posts_search_full | filter:filter; let i = index " (click)="selectPost(post.slug)">
       
             {{ post.title.rendered }} 
       </div>
 </div><!-- ContenedorFintrado -->
+
 
 </div><!-- ContenedorBuscar -->
 
@@ -126,7 +128,7 @@
 
  <div class="Bloques">Publicidad</div>
 
-
+  
 
 
 <div class="redesSociales">
@@ -148,6 +150,7 @@
 
 </div><!-- redesSociales -->
  
+
 
 </div><!--Menu-Activo-Movil -->
 

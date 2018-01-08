@@ -557,7 +557,7 @@
 }
 
 .redes-header{
-    width: 140px !important;
+    width: 160px !important;
     right: 0px !important;
 }
 
@@ -581,7 +581,7 @@
 
 
 .contenedorBuscar {
-    right: 140px !important;
+    right: 160px !important;
 }
 
  
@@ -846,7 +846,7 @@
 }
 
 .contenedorBuscar {
-    width: 50% !important;
+    width: 46% !important;
     position: absolute;
     left: 67px;
     opacity: 0; 
@@ -1183,6 +1183,7 @@
   
   .redes-header  {
     top: 12px;
+    right:  0px !important;
   }
 
 .Menu-Activo-Movil {
@@ -1200,7 +1201,7 @@
 
 
  .contenedorBuscar {
-    width: 44% !important;
+    width: 38% !important;
 }
 
 .ContenedorFintrado{

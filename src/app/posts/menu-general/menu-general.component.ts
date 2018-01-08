@@ -33,18 +33,19 @@ import { Observable, Subscription } from 'rxjs/Rx';
 
     trigger('heroState3', [
     state('inactive', style({transform: 'translateY(0)'})),
-    state('active',   style({transform: 'translateY(-200%) '})),
+    state('active',   style({transform: 'translateY(-200%)', opacity: '0' })),
     
-    transition('inactive => active', animate('400ms ease-in')),
+    transition('inactive => active', animate('200ms ease-in')),
     transition('active => inactive', animate('200ms ease-out'))
     ]),
 
 
     trigger('heroState4', [
-    state('inactive', style({opacity: 0})),
-    state('active',   style({opacity: 1})),
     
-     transition('inactive => active', animate('400ms ease-in')),
+    state('inactive', style({transform: 'translateY(0)'})),
+    state('active',   style({transform: 'translateY(-200%)', opacity: '0' })),
+
+    transition('inactive => active', animate('200ms ease-in')),
     transition('active => inactive', animate('200ms ease-out'))
     ]),
 
@@ -62,7 +63,7 @@ export class MenuGeneralComponent implements OnInit {
   show = false;  
   show2 = false;  
   show3 = false; 
-  show4 = true;
+  show4 = false;
 
   posts_Home: Post[];
   posts: Post[];
@@ -252,8 +253,8 @@ export class MenuGeneralComponent implements OnInit {
 
     // para la busqueda
     toggle3() {
-       this.show4 = !this.show4;
-        console.log("asdasdasd");
+       this.show4 = true;
+       //this.closeSearch();
     }
 
     get stateName4() {
@@ -268,8 +269,9 @@ export class MenuGeneralComponent implements OnInit {
     }
 
     closeSearch() {
-        this.show3 = false;
-         console.log("this.show", this.show3)
+         this.show3 = false;
+         this.show4 = false;
+         console.log("this.show", this.show3);
     }
 
 
