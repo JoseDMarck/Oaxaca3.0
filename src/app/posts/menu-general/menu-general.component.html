@@ -24,10 +24,15 @@
 
    <div class="logo-simple" (click)="GoToInicio()">
      <!-- <img src="assets/images/home/oaxacaLogo.png"> -->
-     oaxacatrespuntocero.com
+     <span class="logoW">oaxacatrespuntocero.com</span>
+     <span class="logoM">oaxaca 3.0</span>
    </div>
 
   <div class="redes-header">
+
+
+     <i class="fa fa-search busquedaIcon" aria-hidden="true" (click)="toggle3()"></i>
+
     <a href="https://www.facebook.com" target="_blank">
       <i class="fa fa-facebook" aria-hidden="true"></i>
     </a>
@@ -44,11 +49,16 @@
       <i class="fa fa-youtube-play" aria-hidden="true"></i>
     </a>
 
+  
 
-<div class="contenedorBuscar" *ngIf="SearchReady">
+
+</div><!-- redesSociales -->
+
+
+<div class="contenedorBuscar" *ngIf="SearchReady" [@heroState4]="stateName4">
    <input class="form-control" type="text" name="search" placeholder="Buscar..." [(ngModel)]="filter" (click)="openSearch()">     
 
-   <div class="iconoBuscar" (click)="GoToBusqueda()" >
+   <div class="iconoBuscar busquedaIcon2" (click)="GoToBusqueda()" >
      <i class="fa fa-search" aria-hidden="true"></i>
    </div><!-- iconoBuscar -->
 
@@ -62,15 +72,6 @@
 </div><!-- ContenedorFintrado -->
 
 </div><!-- ContenedorBuscar -->
-
-
- 
-
-
-
-</div><!-- redesSociales -->
-
-
 
  <!-- MENU MOVIL ================== -->
 <div class="menuMovil">

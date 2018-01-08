@@ -1,6 +1,6 @@
 
 /* --------------------------------------------------------
-/* ---- Responsive: 1920px
+/* ---- Responsive: 4000px
 -------------------------------------------------------- */
 
 @media only screen and (max-width:4000px) {
@@ -30,6 +30,10 @@
 
 }/* 2200 */
 
+
+/* --------------------------------------------------------
+/* ---- Responsive: 2100px
+-------------------------------------------------------- */
 
 @media only screen and (max-width:2100px) {
 
@@ -82,7 +86,7 @@
 
 
 /* --------------------------------------------------------
-/* ---- Responsive: 1800px
+/* ---- Responsive: 1820px
 -------------------------------------------------------- */
 
 @media only screen and (max-width:1820px) {
@@ -256,7 +260,7 @@
 
 
 /* --------------------------------------------------------
-/* ---- Responsive: 1280px
+/* ---- Responsive: 1290px
 -------------------------------------------------------- */
 
 @media only screen and (max-width:1290px) {
@@ -362,7 +366,7 @@
 
 
 /* --------------------------------------------------------
-/* ---- Responsive: 1200px
+/* ---- Responsive: 1220px
 -------------------------------------------------------- */
 
 @media only screen and (max-width:1220px) {
@@ -375,14 +379,7 @@
 
 }/* 1200 */
 
-
-
-/* --------------------------------------------------------
-/* ---- Responsive: 1110px
--------------------------------------------------------- */
  
-
-
 
 /* --------------------------------------------------------
 /* ---- Responsive: 1152px
@@ -404,14 +401,11 @@
   }
 
 
-
-
-
 }/* 1152 */
 
 
 /* --------------------------------------------------------
-/* ---- Responsive: 1024px
+/* ---- Responsive: 1060px
 -------------------------------------------------------- */
 
 @media only screen and (max-width:1060px) {
@@ -510,7 +504,7 @@
 
 
 /* --------------------------------------------------------
-/* ---- Responsive: 911px
+/* ---- Responsive: 1000px
 -------------------------------------------------------- */
 
 @media only screen and (max-width:1000px) {
@@ -538,8 +532,6 @@
   }
  
 
- 
-
 .Menu-Activo-Movil > .btn_Close{
   width: 24px;
   height: 24px;
@@ -551,8 +543,8 @@
 }
 
 .logo-simple {
-  top: 15px;
-  font-size: 16px;
+  top: 15px !important;
+  font-size: 16px !important;
 }
 
 
@@ -565,14 +557,13 @@
 }
 
 .redes-header{
-    width: 140px;
-    right: 0px;
+    width: 140px !important;
+    right: 0px !important;
 }
 
 .redes-header a{
-  margin-right: 0;
+  margin-right: 0 !important;
 }
-
 
 
 .BloqueOX{
@@ -586,6 +577,11 @@
     font-size: 25px;
     line-height: 25px;
     height: 568px;
+}
+
+
+.contenedorBuscar {
+    right: 140px !important;
 }
 
  
@@ -624,7 +620,7 @@
 
 
 /* --------------------------------------------------------
-/* ---- Responsive: 830px
+/* ---- Responsive: 860px
 -------------------------------------------------------- */
 
 @media only screen and (max-width:860px) {
@@ -691,11 +687,11 @@
 
 
 
-}/* 900 */
+}/* 860 */
 
 
 /* --------------------------------------------------------
-/* ---- Responsive: 740px
+/* ---- Responsive: 780px
 -------------------------------------------------------- */
 
 @media only screen and (max-width:780px) {
@@ -743,14 +739,24 @@
 }
 
 
-.contenedorBuscar  {
-    width: 120px;
-    height: 30px;
-    position: absolute;
-    right: 160px;
-    top: 0px;
+ 
+
+
+
+
 }
 
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 740px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:740px) {
+  .logo-simple  {
+      top: 16px;
+      font-size: 16px;
+  }
 
 }
 
@@ -814,9 +820,57 @@
 }
 
 
-}/* 900 */
+}/* 660 */
 
 
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 640px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:640px) {
+
+.busquedaIcon{
+  display: inline-block !important; 
+}
+
+.redes-header {
+    right: 10px !important;
+}
+
+ 
+
+.busquedaIcon2{
+  display: none !important;
+}
+
+.contenedorBuscar {
+    width: 50% !important;
+    position: absolute;
+    left: 67px;
+    opacity: 0; 
+}
+
+
+}/* 640 */
+
+
+/* --------------------------------------------------------
+/* ---- Responsive: 615px
+-------------------------------------------------------- */
+
+@media only screen and (max-width:615px) {
+
+  .logoM{
+    display: block !important;
+  }
+
+  .logoW{
+    display: none !important; 
+  }
+
+}
 
 
 /* --------------------------------------------------------
@@ -824,14 +878,9 @@
 -------------------------------------------------------- */
 
 @media only screen and (max-width:580px) {
+ 
 
-.logo-simple{
-  display: none;
-}
 
-.contenedorBuscar {
-  width: 160px;
-}
 
 }
 
@@ -1056,6 +1105,7 @@
 }
 
 
+ 
 }/* 900 */
 
 
@@ -1148,6 +1198,15 @@
   width: 10%;
 }
 
+
+ .contenedorBuscar {
+    width: 44% !important;
+}
+
+.ContenedorFintrado{
+  left: -30px !important;
+}
+
 }
 
 /* --------------------------------------------------------
@@ -1220,6 +1279,14 @@
     width: 100px;
 }
 
+
+ .contenedorBuscar {
+    width: 30% !important;
+}
+
+.logo-simple{
+  display: none;
+}
 
 }
 

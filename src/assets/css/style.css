@@ -292,6 +292,13 @@ body{
   height: auto;
 }
 
+.logoM{
+display: none;
+}
+
+.logoW{
+ display: block; 
+}
 
 .redes-header{
   width: 200px;
@@ -303,6 +310,17 @@ body{
   font-size: 20px;
   color: #D20417;
 }
+
+.redes-header i{
+  color: #000;
+  margin-right: 0px;
+   -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+}
+
+
 
 .redes-header a{
   color: #000;
@@ -545,7 +563,8 @@ cursor: pointer;
   height: 30px;
   position: absolute;
   right:  200px;
-  top: 0px;
+  top: 12px;
+  opacity: 1;
 
 }
 
@@ -627,6 +646,14 @@ cursor: pointer;
 }
 
 
+
+.busquedaIcon{
+  display: none;
+}
+
+.busquedaIcon2{
+  display: block;
+}
 
 /* --------------------------------------------------------
 /* ---- BUSQUEDA ON POST

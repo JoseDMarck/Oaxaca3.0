@@ -36,8 +36,19 @@ import { Observable, Subscription } from 'rxjs/Rx';
     state('active',   style({transform: 'translateY(-200%) '})),
     
     transition('inactive => active', animate('400ms ease-in')),
-    transition('active => inactive', animate('200ms ease-out')), 
+    transition('active => inactive', animate('200ms ease-out'))
     ]),
+
+
+    trigger('heroState4', [
+    state('inactive', style({opacity: 0})),
+    state('active',   style({opacity: 1})),
+    
+     transition('inactive => active', animate('400ms ease-in')),
+    transition('active => inactive', animate('200ms ease-out'))
+    ]),
+
+
 
 
 
@@ -51,7 +62,9 @@ export class MenuGeneralComponent implements OnInit {
   show = false;  
   show2 = false;  
   show3 = false; 
- posts_Home: Post[];
+  show4 = true;
+
+  posts_Home: Post[];
   posts: Post[];
   posts_principales: Post[];
   posts_glamour: Post[];
@@ -75,6 +88,7 @@ export class MenuGeneralComponent implements OnInit {
   loadMoreVisible : boolean;
   SearchReady : boolean;
   selectedClass: number;
+  busquedaMovil : boolean;
 
  
 
@@ -86,8 +100,7 @@ export class MenuGeneralComponent implements OnInit {
     this.loadMoreVisible = false;
     this.post_count = 20;
     this.SearchReady = false;
-
-   
+    this.busquedaMovil = false;
   }
 
 
@@ -109,7 +122,8 @@ export class MenuGeneralComponent implements OnInit {
       .getPostsSearchFull()
       .subscribe(res => {
         this.posts_search_full = res;
-        this.SearchReady = true
+        this.SearchReady = true;
+        this.busquedaMovil = true;
       });
   }
 
@@ -212,7 +226,10 @@ export class MenuGeneralComponent implements OnInit {
     //ANIMACION TOGGLE
     get stateName() {
         return this.show ? 'show' : 'hide'
-     }
+    }
+
+
+
 
     toggle() {
         this.show = !this.show;
@@ -228,10 +245,22 @@ export class MenuGeneralComponent implements OnInit {
     }
 
 
-
+    
     get stateName3() {
         return this.show3 ? 'inactive' : 'active'
     }
+
+    // para la busqueda
+    toggle3() {
+       this.show4 = !this.show4;
+        console.log("asdasdasd");
+    }
+
+    get stateName4() {
+        return this.show4 ? 'inactive' : 'active'
+    }
+
+
 
     openSearch() {
         this.show3 = true;
