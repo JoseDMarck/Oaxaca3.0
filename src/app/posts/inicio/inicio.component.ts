@@ -123,6 +123,7 @@ export class InicioComponent implements OnInit     {
       .getPosts_principales()
       .subscribe(res => {
         this.posts_principales = res;
+        window.scrollTo(0, 0);
       });
   }
 
