@@ -771,6 +771,8 @@
 }
 
 
+
+
 }/* 900 */
 
 
@@ -818,6 +820,8 @@
   top: 17px;
   font-size: 14px;
 }
+
+
 
 
 }/* 660 */
@@ -1018,6 +1022,16 @@
     right: 132px;
 }
 
+.Redacciones > .bloques{
+  width: 100%;
+  height: auto;
+  padding: 5px;
+}
+
+.Redacciones > .bloques img {
+  width: 50%;
+  height: auto;
+} 
 
 }/* 568 */
 

@@ -1260,6 +1260,38 @@ color: #CC151A;
 }
 
 
+
+/* --------------------------------------------------------
+/* ---- REDACCIONES
+-------------------------------------------------------- */
+.Redacciones{
+  width: 100%;
+  height: auto;
+  background: #000;
+  margin-bottom: 30px;
+}
+
+.Redacciones > .tituloRedacciones{
+  color: #FFF !important;
+}
+
+.Redacciones > .bloques{
+  width: 25%;
+  height: auto;
+  float: left;
+  padding: 20px;
+  border-right: solid 0px rgba(0, 0, 0, 0);
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.Redacciones > .bloques img {
+  width: 100%;
+  height: auto;
+} 
+
+
+
 /* --------------------------------------------------------
 /* ---- DATOS 
 -------------------------------------------------------- */
@@ -2401,7 +2433,7 @@ filter: grayscale(0%);
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(255,255,255,0.9);
+  background: #FFF;
   z-index: 999999;
   font: 18px "Gotham-Black" !important;
   text-transform: uppercase;
