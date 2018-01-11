@@ -5,6 +5,9 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { trigger, state, style, animate,transition } from '@angular/animations';
 import { DomSanitizer } from '@angular/platform-browser';
 import { FacebookService, InitParams } from 'ngx-facebook';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+
 
 
 
@@ -37,7 +40,7 @@ import { FacebookService, InitParams } from 'ngx-facebook';
   providers: [PostsService]
 })
 
-export class PostSingleComponent implements OnInit {
+export class PostSingleComponent implements OnInit  {
 
 	  post: Post;
     post_related: Post;
@@ -58,6 +61,7 @@ export class PostSingleComponent implements OnInit {
   repoUrl:any;
   slugArray: any;
   TweetTitulo: any;
+
 
 
   categorias: Post[];
@@ -106,7 +110,7 @@ export class PostSingleComponent implements OnInit {
          console.log("CURRENT ID", this.current_id);
          console.log("TAMAÑO BLOQUE", this.tam_bloque);
          this.getPostRelated(this.categoria, this.current_id);
-         this.repoUrl = 'http://michoacantrespuntocero.com/2018elecciones.com/posts-redes/'+this.slugArray;
+         this.repoUrl = 'http://oaxacatrespuntocero.com/posts-redes/'+this.slugArray;
 
 
          if(this.tam_bloque != "" ){
@@ -172,9 +176,9 @@ export class PostSingleComponent implements OnInit {
 
   ngAfterViewInit() {
 
-    
+ 
+ setTimeout(() => { try { (window["adsbygoogle"] = window["adsbygoogle"] || []).push({}); } catch (e) { console.error(e);} }, 2000);
 
-   
    console.log("estoy  en ngAfterViewInit")
    setTimeout(() => { 
      this.toggle()

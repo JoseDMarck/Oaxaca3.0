@@ -54,9 +54,28 @@
 		<img src="{{ post.imagen_minsize }}" class="img-fluid">
 	</div>
 
+ 
 
  
+
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8679309527925483"
+     data-ad-slot="7730277256"
+     data-ad-format="auto">
+</ins>
+
+
+
+ 
+
+
 	 <div [innerHTML]="sanitizer.bypassSecurityTrustHtml(post.content.rendered)" class="Post_Redered"></div> 
+
+
+
+ 
 	 <!--<div [innerHTML]="post.content.rendered" class="Post_Redered"></div> -->
  
  
@@ -94,6 +113,7 @@
 		<div class="imagen">
 			  <div class="imagen-BG" [style.background-image]="getBackground(post.imagen_normalsize)"></div>
 		</div><!-- imagen -->
+
 
 
 		<div class="informacion">
