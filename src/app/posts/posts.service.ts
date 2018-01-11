@@ -7,7 +7,7 @@ import { Post } from './post';
 @Injectable()
 export class PostsService {
   //http://meditarensupabra.com/demos/AudiosCDO/wp-json/wp/v2/ 
-private postsUrl = "http://meditarensupabra.com/demos/AudiosCDO/wp-json/wp/v2/";
+private postsUrl = "http://oaxacatrespuntocero.com/wp-json/wp/v2/";
 
   constructor(private http: Http) { }
 
@@ -89,7 +89,7 @@ private postsUrl = "http://meditarensupabra.com/demos/AudiosCDO/wp-json/wp/v2/";
   // POST PARA PRINCIPALES
   getPosts_principales(): Observable<Post[]> {
       return this.http
-        .get(this.postsUrl + 'posts?categories=40&per_page=7&order=desc')
+        .get(this.postsUrl + 'posts?categories=14&per_page=7&order=desc')
         .map((res: Response) => res.json());
   }
 
@@ -103,19 +103,19 @@ private postsUrl = "http://meditarensupabra.com/demos/AudiosCDO/wp-json/wp/v2/";
   // POST PARA GLAMOUR
   getPosts_glamour(): Observable<Post[]> {
       return this.http
-        .get(this.postsUrl + 'posts?categories=41&per_page=1&order=desc')
+        .get(this.postsUrl + 'posts?categories=5071&per_page=1&order=desc')
         .map((res: Response) => res.json());
   }
 
   getPosts_glamour_next(): Observable<Post[]> {
         return this.http
-        .get(this.postsUrl + 'posts?categories=41&per_page=4&order=desc&offset=1')
+        .get(this.postsUrl + 'posts?categories=5071&per_page=4&order=desc&offset=1')
         .map((res: Response) => res.json());
   }
 
    getPosts_glamour_full(): Observable<Post[]> {
       return this.http
-        .get(this.postsUrl + 'posts?categories=41&per_page=10&order=desc')
+        .get(this.postsUrl + 'posts?categories=5071&per_page=10&order=desc')
         .map((res: Response) => res.json());
   }
 
@@ -123,19 +123,19 @@ private postsUrl = "http://meditarensupabra.com/demos/AudiosCDO/wp-json/wp/v2/";
   // POST PARA INTERNET
   getPosts_internet(): Observable<Post[]> {
       return this.http
-        .get(this.postsUrl + 'posts?categories=42&per_page=1&order=desc')
+        .get(this.postsUrl + 'posts?categories=5072&per_page=1&order=desc')
         .map((res: Response) => res.json());
   }
 
   getPosts_internet_next(): Observable<Post[]> {
         return this.http
-        .get(this.postsUrl + 'posts?categories=42&per_page=4&order=desc&offset=1')
+        .get(this.postsUrl + 'posts?categories=5072&per_page=4&order=desc&offset=1')
         .map((res: Response) => res.json());
   }
 
   getPosts_internet_full(): Observable<Post[]> {
       return this.http
-        .get(this.postsUrl + 'posts?categories=42&per_page=10&order=desc')
+        .get(this.postsUrl + 'posts?categories=5072&per_page=10&order=desc')
         .map((res: Response) => res.json());
   }
 
@@ -143,13 +143,13 @@ private postsUrl = "http://meditarensupabra.com/demos/AudiosCDO/wp-json/wp/v2/";
     // POST PARA DEPORTES
   getPosts_deportes(): Observable<Post[]> {
       return this.http
-        .get(this.postsUrl + 'posts?categories=43&per_page=4&order=desc')
+        .get(this.postsUrl + 'posts?categories=2200&per_page=4&order=desc')
         .map((res: Response) => res.json());
   }
 
   getPosts_deportes_full(): Observable<Post[]> {
       return this.http
-        .get(this.postsUrl + 'posts?categories=43&per_page=10&order=desc')
+        .get(this.postsUrl + 'posts?categories=2200&per_page=10&order=desc')
         .map((res: Response) => res.json());
   }
 
@@ -158,39 +158,39 @@ private postsUrl = "http://meditarensupabra.com/demos/AudiosCDO/wp-json/wp/v2/";
    // POST PARA VIDEOS
   getPosts_videos(): Observable<Post[]> {
       return this.http
-        .get(this.postsUrl + 'posts?categories=46&per_page=4&order=desc')
+        .get(this.postsUrl + 'posts?categories=18&per_page=4&order=desc')
         .map((res: Response) => res.json());
   }
 
   getPosts_videos_full(): Observable<Post[]> {
       return this.http
-        .get(this.postsUrl + 'posts?categories=46&per_page=10&order=desc')
+        .get(this.postsUrl + 'posts?categories=18&per_page=10&order=desc')
         .map((res: Response) => res.json());
   }
 
    // POST PARA ESPECTACULOS
   getPosts_espectaculos(): Observable<Post[]> {
       return this.http
-        .get(this.postsUrl + 'posts?categories=44&per_page=1&order=desc')
+        .get(this.postsUrl + 'posts?categories=4807&per_page=1&order=desc')
         .map((res: Response) => res.json());
   }
 
   getPosts_espectaculos_next(): Observable<Post[]> {
         return this.http
-        .get(this.postsUrl + 'posts?categories=44&per_page=4&order=desc&offset=1')
+        .get(this.postsUrl + 'posts?categories=4807&per_page=4&order=desc&offset=1')
         .map((res: Response) => res.json());
   }
 
   getPosts_espectaculos_full(): Observable<Post[]> {
       return this.http
-        .get(this.postsUrl + 'posts?categories=44&per_page=10&order=desc')
+        .get(this.postsUrl + 'posts?categories=4807&per_page=10&order=desc')
         .map((res: Response) => res.json());
   }
 
-    // POST PARA ESPECTACULOS
+    // POST PARA EN OXACA
   getPosts_en_oaxaca(): Observable<Post[]> {
       return this.http
-        .get(this.postsUrl + 'posts?categories=45&per_page=4&order=desc')
+        .get(this.postsUrl + 'posts?categories=4391&per_page=4&order=desc')
         .map((res: Response) => res.json());
   }
 
