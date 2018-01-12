@@ -163,7 +163,7 @@ onScroll () {
    
    console.log("numero load more "+ numero)
     this.postsService
-      .LoadMorePostsServicebyCategory(41, numero)
+      .LoadMorePostsServicebyCategory(5071, numero)
       .subscribe(res => {
         this.posts = res;
 

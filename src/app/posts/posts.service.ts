@@ -204,7 +204,7 @@ private postsUrl = "http://oaxacatrespuntocero.com/wp-json/wp/v2/";
 
   getPosts_en_oaxaca_full(): Observable<Post[]> {
       return this.http
-        .get(this.postsUrl + 'posts?categories=45&per_page=10&order=desc')
+        .get(this.postsUrl + 'posts?categories=4391&per_page=10&order=desc')
         .map((res: Response) => res.json());
   }
   
