@@ -10,9 +10,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 
 
-
-
-
 @Component({
   selector: 'app-post-single',
   templateUrl: './post-single.component.html',
@@ -84,10 +81,7 @@ export class PostSingleComponent implements OnInit  {
     this.post_count = 20;
     this.tam_bloque_visible = false;
     this.tam_bloqueC_visible = true;
-   
-
-    
-      
+  
   }
 
 
