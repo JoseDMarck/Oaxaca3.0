@@ -26,6 +26,7 @@ import { CeiboShare } from 'ng2-social-share';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { FacebookModule } from 'ngx-facebook';
 import { Ng2SearchPipeModule } from 'ng2-search-filter-master';
+ 
 
  
 
@@ -56,6 +57,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter-master';
     InfiniteScrollModule,
     Ng2SearchPipeModule,
     FacebookModule.forRoot(),
+    
+     
     BrowserAnimationsModule
   ],
   providers: [Title],
