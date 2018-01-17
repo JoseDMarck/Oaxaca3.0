@@ -1,0 +1,24 @@
+{
+  "network": "000000000",
+  "tags": {
+    "banner": 21636432309
+  },
+  "ID": {
+    "banner": "my-banner"
+  },
+  "mapping": {
+    "mobile": {
+      "width": 320,
+      "height": 50
+    },
+    "tablet": {
+      "width": 728,
+      "height": 90
+    },
+    "desktop": {
+      "width": 1024,
+      "height": 120
+    }
+  },
+  "adBlockDetector": false
+}
