@@ -171,7 +171,7 @@ export class PostSingleComponent implements OnInit  {
   ngAfterViewInit() {
 
  
- setTimeout(() => { try { (window["adsbygoogle"] = window["adsbygoogle"] || []).push({}); } catch (e) { console.error(e);} }, 2000);
+ //setTimeout(() => { try { (window["adsbygoogle"] = window["adsbygoogle"] || []).push({}); } catch (e) { console.error(e);} }, 2000);
 
    console.log("estoy  en ngAfterViewInit")
    setTimeout(() => { 
