@@ -60,7 +60,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter-master';
     Ng2SearchPipeModule,
     AdsenseModule.forRoot({
       adClient: 'ca-pub-4696364289529994',
-      adSlot: 6441046231,
+      adSlot: 1072236669,
     }),
     FacebookModule.forRoot(),
     
