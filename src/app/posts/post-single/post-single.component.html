@@ -77,14 +77,23 @@
      data-ad-client="ca-pub-4696364289529994"
      data-ad-slot="1888529465">
 </ins> -->
- 
+ BLOQUE 1:
  <ng-adsense
+  [adClient]="'ca-pub-4696364289529994'"
+  [adSlot]="1072236669"
+  [display]="'inline-block'"
+  [width]="728"
+  [height]="90">
+</ng-adsense>
+
+BLOQUE 2:
+ <!--<ng-adsense
   [adClient]="'ca-pub-4696364289529994'"
   [adSlot]="6441046231"
   [display]="'inline-block'"
   [width]="728"
   [height]="90">
-</ng-adsense>
+</ng-adsense>-->
   
 	 <div [innerHTML]="sanitizer.bypassSecurityTrustHtml(post.content.rendered)" class="Post_Redered"></div> 
 
