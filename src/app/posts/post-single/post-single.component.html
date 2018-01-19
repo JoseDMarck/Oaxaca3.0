@@ -78,11 +78,14 @@
      data-ad-slot="1888529465">
 </ins> -->
  
+  <!-- BannerTop -->
+  <app-banner-post-top></app-banner-post-top>
+      
+      <div [innerHTML]="sanitizer.bypassSecurityTrustHtml(post.content.rendered)" class="Post_Redered"></div> 
 
- 
-	 <div [innerHTML]="sanitizer.bypassSecurityTrustHtml(post.content.rendered)" class="Post_Redered"></div> 
 
-
+   <!-- BannerBottom -->
+   <app-banner-post-bottom></app-banner-post-bottom>
 
 
  
