@@ -17,7 +17,14 @@ import { InternetComponent  } from './posts/internet/internet.component';
 import { DeportesComponent  } from './posts/deportes/deportes.component';
 import { EspectaculosComponent  } from './posts/espectaculos/espectaculos.component';
 import { VideosComponent  } from './posts/videos/videos.component';
-import { OaxacaComponent  } from './posts/oaxaca/oaxaca.component';
+import { OaxacaComponent  } from './posts/oaxaca/oaxaca.component'
+
+//BANNERS 
+
+import {  BannerPostTopComponent } from './banners/banner-post-top/banner-post-top.component'
+import {  BannerPostBottomComponent } from './banners/banner-post-bottom/banner-post-bottom.component'
+
+
 import {ShareModule} from 'ng2share/share.module'
 import { MenuGeneralComponent } from './posts/menu-general/menu-general.component';
 import { BusquedaComponent } from './posts/busqueda/busqueda.component';
@@ -45,6 +52,11 @@ import { AdDFPComponent } from 'ng2-ad-dfp';
     EspectaculosComponent, 
     VideosComponent,
     OaxacaComponent,
+
+    //Banners 
+    BannerPostTopComponent,
+    BannerPostBottomComponent,
+
     BusquedaComponent,
     AdDFPComponent,
     CeiboShare
