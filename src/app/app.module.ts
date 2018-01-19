@@ -26,8 +26,7 @@ import { CeiboShare } from 'ng2-social-share';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { FacebookModule } from 'ngx-facebook';
 import { Ng2SearchPipeModule } from 'ng2-search-filter-master';
- import { AdDFPComponent } from 'ng2-ad-dfp';
- import { AdsenseModule } from 'ng2-adsense';
+import { AdDFPComponent } from 'ng2-ad-dfp';
 
  
 
@@ -58,10 +57,6 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter-master';
     ShareModule,
     InfiniteScrollModule,
     Ng2SearchPipeModule,
-    AdsenseModule.forRoot({
-      adClient: 'ca-pub-4696364289529994',
-      adSlot: 1072236669,
-    }),
     FacebookModule.forRoot(),
     
      
