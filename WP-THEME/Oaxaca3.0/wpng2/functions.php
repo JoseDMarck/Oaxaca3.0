@@ -114,6 +114,4 @@ function  Extracto ($post_id){
 }
 
 
-
-
 ?>
