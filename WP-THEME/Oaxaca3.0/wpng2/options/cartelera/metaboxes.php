@@ -48,53 +48,6 @@ function vimeo_upload_form(){
 <?php
 }
 
-
-
- /*------------------------------------------*\
-    Page Metabox
-  \*---------------------------------------*/
-
-
-  add_action( 'add_meta_boxes', 'page_get_image' );
-  function page_get_image( $post ) {
-  add_meta_box( 
-  'em-img-meta', // atributo ID
-  '<h1 style="color:#2980b9"> Imagen Post</h1>', // Título
-  'datos_imagen', // Función que muestra el HTML que aparecerá en la pantalla
-  'page', // Tipo de entrada. Puede ser 'post', 'page', 'link', o 'custom_post_type'
-  'normal', // Parte de la pantalla donde aparecerá. Puede ser 'normal', 'advanced', o 'side'
-  'default' // Prioridad u orden en el que aparecerá. Puede ser 'high', 'core', 'default' o 'low'
-  );
-  }
-
-  function datos_imagen( $post ) {
-  
-  $value_id_imagen_page = (get_post_meta($post->ID, 'id_imagen_page', true));
-
-?>
-<b><span style="color:#1abc9c">Mes titulo:</span></b> <br><br>
-<input type="text" name="id_imagen_page" id="id_imagen_page" value="<?php echo $value_id_imagen_page; ?>" style="width: 600px;" /><br><br>
-
-
-
-
-
-
-<?php }
-
-
-  add_action('save_post', 'post_dato_imagen_page');
-  function post_dato_imagen_page() {
-  global $wpdb, $post;
-  if (!$post_id) $post_id = $_POST['post_ID'];
-  $var_1= $_POST['id_imagen_page'];
-  update_post_meta($post_id, 'id_imagen_page', $var_1);
-  }
-
-  ?>
-
-<?php 
-
  /*------------------------------------------*\
      SINGLE FUNCTIONS CARTELERA
   \*---------------------------------------*/
@@ -925,6 +878,6 @@ function slug_update_post_categoria( $value, $object, $field_name ) {
 
 
 
-//
-?>
 
+
+?>

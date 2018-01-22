@@ -31,6 +31,9 @@ add_post_type_support( 'page', 'excerpt' );
 // METABOX CARTELERA
 include 'options/cartelera/metaboxes.php';
 
+// METABOX CARTELERA
+include 'options/banners/metaboxes.php';
+
 
 
 /*------------------------------------*\
@@ -112,6 +115,5 @@ function  Extracto ($post_id){
 
 
 
- 
 
 ?>
