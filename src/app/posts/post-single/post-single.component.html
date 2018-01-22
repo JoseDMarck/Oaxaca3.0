@@ -32,10 +32,21 @@
 <div class="BloqueMainPost" [@fadeInAnimation]="stateName">
 
 
+ 
+
+
 <div class="contenidoPost" *ngIf="post">
   
+
+
+     <!-- app-banner-header-home -->
+    <div class="banner_full-post">
+      <app-banner-header-home></app-banner-header-home>
+    </div>
+    <!-- app-banner-header-home -->
+
+
 <!-- Imagen del post -->
- 
 
 	<div class="Seccion-titulo" *ngIf="tam_bloqueC_visible">
 
@@ -119,6 +130,14 @@
 
 <!-- NOTAS RELACIONADAS -->
 <div class="NotasRelacionadas">
+
+     <!-- app-banner-header-home -->
+    <div class="banner_full-post">
+      <app-banner-header-home></app-banner-header-home>
+    </div>
+    <!-- app-banner-header-home -->
+
+
 	<div class="SeccionTitulo">Noticias Relacionadas</div>
 
 	<div class="BloqueInformacion" *ngFor="let post of posts_related; let i = index; " (click)="selectPost(post.slug)">
@@ -142,6 +161,15 @@
 
 
 <div style="clear: both;"></div>
+
+
+   <!-- app-banner-header-home -->
+    <div class="banner_full-post">
+      <app-banner-header-home></app-banner-header-home>
+    </div>
+    <!-- app-banner-header-home -->
+
+
 </div><!-- NotasRelacionadas -->
 
 
