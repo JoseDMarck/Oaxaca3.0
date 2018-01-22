@@ -22,7 +22,7 @@ export class BannerPostTopComponent implements OnInit {
             console.error("error");
           }
         },2000);
-     }     
+  }     
 
 
 }
