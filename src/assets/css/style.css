@@ -2157,6 +2157,41 @@ filter: grayscale(0%);
 
  
 
+/* --------------------------------------------------------
+/* ---- BANNERS 
+-------------------------------------------------------- */
+
+.banner_conetedor{
+  width: 100%;
+  height: auto;
+}
+
+
+.banner_A{
+  width: 50%;
+  height: auto;
+  float: left;
+  margin-bottom: 20px;
+  padding: 20px 0 20px 10px;
+  border-right: solid 20px rgba(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.banner_B{
+  width: 50%;
+  height: auto;
+  float: left;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.banner_full{
+  width: 80%;
+  height: auto;
+  margin:  0 auto;
+  margin-bottom: 20px;
+}
+
 
 /* --------------------------------------------------------
 /* ---- Footer 
