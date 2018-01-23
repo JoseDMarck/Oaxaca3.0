@@ -4,10 +4,12 @@
   <div class="closebtnPopup"></div> 
 
   <!-- GOOGLE ANALITYCS -->
+    <div style="display: none;">
   <div class="titulosBanners">1.- Código para Google Analitycs </div>
   <textarea  name="analitycs_banner_post_2" id="analitycs_banner_post_2" rows="5" cols="50"> 
      <?php echo $analitycs_banner_post_2; ?>
-  </textarea><br><br>
+  </textarea><br><br>ç
+</div>
 
 
   <div class="titulosBanners">2.- Subir imagen Propia</div>
