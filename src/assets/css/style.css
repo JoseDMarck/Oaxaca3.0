@@ -2177,6 +2177,13 @@ filter: grayscale(0%);
   overflow: hidden;
 }
 
+
+.banner_A img{
+  width: 100%;
+  height: auto;
+}
+
+
 .banner_B{
   width: 50%;
   height: auto;
@@ -2185,11 +2192,21 @@ filter: grayscale(0%);
   overflow: hidden;
 }
 
+.banner_B img{
+  width: 100%;
+  height: auto;
+}
+
 .banner_full{
   width: 80%;
   height: auto;
   margin:  0 auto;
   margin-bottom: 20px;
+}
+
+.banner_full img{
+  width: 100%;
+  height: auto;
 }
 
 

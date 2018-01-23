@@ -740,7 +740,17 @@
 
 
  
+.banner_A{
+  width: 100%;
+  height: auto;
+  float: none;
+} 
 
+.banner_B{
+  width: 100%;
+  height: auto;
+  float: none;
+} 
 
 
 
