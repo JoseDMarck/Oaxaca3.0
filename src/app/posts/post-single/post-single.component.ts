@@ -142,6 +142,13 @@ export class PostSingleComponent implements OnInit  {
          window.scrollTo(0, 0);
 
     });         
+
+
+    var script = document.createElement('script');
+    document.body.appendChild(script)
+    script.src = '//a.teads.tv/page/75644/tag';
+
+
   }
 
 

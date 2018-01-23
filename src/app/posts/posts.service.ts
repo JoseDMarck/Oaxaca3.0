@@ -215,7 +215,17 @@ private postsUrl = "http://oaxacatrespuntocero.com/wp-json/wp/v2/";
         .map((res: Response) => res.json());
   }
 
+//http://oaxacatrespuntocero.com/wp-json/wp/v2/pages/35238
 
+  getPosts_banners(): Observable<Post> {
+        return this.http
+        .get(this.postsUrl + `pages?slug=banners`)
+        .map((res: Response) => res.json());
+  }
+
+
+
+ 
 
 
 
