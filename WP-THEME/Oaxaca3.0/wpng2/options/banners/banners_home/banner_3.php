@@ -46,7 +46,7 @@
 
                   <br />
                   <input class="banner_class_url_3" id="imagen_banner_3"  type="text" name="imagen_banner_3" size="30" value="<?php echo $imagen_banner_3; ?>" style="display:none">
-                 <button onclick="Function_banner_1()"  class="button-primary">Borrar Imagen</button> <br><br>
+                 <button onclick="Function_banner_3()"  class="button-primary">Borrar Imagen</button> <br><br>
                  <center>
                     <button class="button-primary button-aceptar">Guardar cambios</button>
                  </center>
@@ -74,7 +74,7 @@
                     });
                 });
 
-                function Function_banner_1() { 
+                function Function_banner_3() { 
                   document.getElementById("imagen_banner_3").value = "";    
                   document.getElementById("url_banner_home_3").value = "";    
                 }
