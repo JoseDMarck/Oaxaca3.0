@@ -17,7 +17,7 @@ add_action('save_post', 'post_dato_imagen_prueba');
   }
 
 
-  //BANERS HOME
+  //BANERS HOME no 1
   add_action('save_post', 'post_analitycs_banner_home_1');
   function post_analitycs_banner_home_1() {
   global $wpdb, $post;
@@ -44,3 +44,30 @@ add_action('save_post', 'post_dato_imagen_prueba');
   update_post_meta($post_id, 'url_banner_home_1', $var_1);
   }
 
+
+  //BANERS HOME NO 2
+  add_action('save_post', 'post_analitycs_banner_home_2');
+  function post_analitycs_banner_home_2() {
+  global $wpdb, $post;
+  if (!$post_id) $post_id = $_POST['post_ID'];
+  $var_1= $_POST['analitycs_banner_home_2'];
+  update_post_meta($post_id, 'analitycs_banner_home_2', $var_1);
+  }
+
+
+  add_action('save_post', 'post_imagen_banner_2');
+  function post_imagen_banner_2() {
+  global $wpdb, $post;
+  if (!$post_id) $post_id = $_POST['post_ID'];
+  $var_1= $_POST['imagen_banner_2'];
+  update_post_meta($post_id, 'imagen_banner_2', $var_1);
+  }
+
+
+  add_action('save_post', 'post_url_banner_home_2');
+  function post_url_banner_home_2() {
+  global $wpdb, $post;
+  if (!$post_id) $post_id = $_POST['post_ID'];
+  $var_1= $_POST['url_banner_home_2'];
+  update_post_meta($post_id, 'url_banner_home_2', $var_1);
+  }
