@@ -29,6 +29,11 @@
   $url_banner_home_2 = (get_post_meta($post->ID, 'url_banner_home_2', true));
   $imagen_banner_2 = (get_post_meta($post->ID, 'imagen_banner_2', true)); 
 
+   //BANNER 3
+  $analitycs_banner_home_3 = (get_post_meta($post->ID, 'analitycs_banner_home_3', true));
+  $url_banner_home_3 = (get_post_meta($post->ID, 'url_banner_home_3', true));
+  $imagen_banner_3 = (get_post_meta($post->ID, 'imagen_banner_3', true)); 
+
 
 ?>
 
@@ -112,6 +117,7 @@
 // METABOX CARTELERA
 include 'banners_home/banner_1.php';
 include 'banners_home/banner_2.php';
+include 'banners_home/banner_3.php';
 ?>
 
 
@@ -137,6 +143,7 @@ include 'REST_API_REGISTER/generales.php';
 // REST API BANNERS 
 include 'REST_API_REGISTER/banner_1.php';
 include 'REST_API_REGISTER/banner_2.php';
+include 'REST_API_REGISTER/banner_3.php';
 
 ?>
 
