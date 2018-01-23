@@ -101,209 +101,36 @@
 
 <div class="Bloque_popup">
 
-<!-- ==============================================  
- BANNER 1
-============================================== -->   
+∑
 
-<!-- Para Banner No. 1 -->
-<div class="ContenedorDatos ContenedorBanner_1">
-  <h1>Banner No.1 | Tamaño recomendado: 728px por 90px </h1><br>
-  <div class="closebtnPopup"></div> 
-
-  <!-- GOOGLE ANALITYCS -->
-  <div class="titulosBanners">1.- Código para Google Analitycs </div>
-  <textarea  name="analitycs_banner_home_1" id="analitycs_banner_home_1" rows="5" cols="50"> 
-     <?php echo $analitycs_banner_home_1; ?>
-  </textarea><br><br>
-
-
-  <div class="titulosBanners">2.- Subir imagen Propia</div>
-                
-    <?php // Banner imagen 1 ***************************************************
-
-            if(function_exists( 'wp_enqueue_media' )){
-                wp_enqueue_media();
-            }else{
-                wp_enqueue_style('thickbox');
-                wp_enqueue_script('media-upload');
-                wp_enqueue_script('thickbox');
-            }
-            ?>
-
-
-            <p>
-            <?php
-            // Comparamos si existe la URL *****************
-             
-                
-                if ($imagen_banner_1 != '') {?> 
-                   <img class="banner_class_1" src="<?php echo $imagen_banner_1 ?>"  width="728" height="90" style="cursor:pointer;"/>
-                <?php }
-
-
-                else { ?>
-                    <img class="banner_class_1" src="<?php echo get_template_directory_uri();?>/options/images/defaultlogo.png"  width="228" height="110"  style="cursor:pointer;"/>  
-               <?php } ?> 
-
-                <!--Banner URL -->
-                 <div class="titulosBanners">URL del Banner</div>
-                 <p>Introduce la URL a dónde redireccionará el banner</p>
-                 <input type="text" class="url_class_banner_home_1" id="url_banner_home_1" name="url_banner_home_1" size="80" value="<?php echo $url_banner_home_1; ?>"> <br>
-
-
-                  <br />
-                  <input class="banner_class_url_1" id="imagen_banner_1"  type="text" name="imagen_banner_1" size="30" value="<?php echo $imagen_banner_1; ?>" style="display:none">
-                 <button onclick="Function_banner_1()"  class="button-primary">Borrar Imagen</button> <br><br>
-                 <center>
-                    <button class="button-primary button-aceptar">Guardar cambios</button>
-                 </center>
-            </p> 
-
-            <hr>
-            <script>
-                jQuery(document).ready(function($) {
-                    $('.banner_class_1').click(function(e) {
-                        e.preventDefault();
-
-                        var custom_uploader = wp.media({
-                            title: 'Custom Image',
-                            button: {
-                                text: 'Upload Image'
-                            },
-                            multiple: false  // Set this to true to allow multiple files to be selected
-                        })
-                        .on('select', function() {
-                            var attachment = custom_uploader.state().get('selection').first().toJSON();
-                            $('.imagen_banner_1').attr('src', attachment.url);
-                            $('.banner_class_url_1').val(attachment.url);
-                        })
-                        .open();
-                    });
-                });
-
-                function Function_banner_1() { 
-                  document.getElementById("imagen_banner_1").value = "";    
-                  document.getElementById("url_banner_home_1").value = "";    
-                }
-                
-            </script>
-
-
-</div><!-- ContenedorDatos -->
-
+<?php 
+// METABOX CARTELERA
+include 'banners_home/banner_1.php';
+?>
 
 
 
 </div> <!-- Bloque_poup -->
-
-
 </div><!-- Bloque Main -->
 
 <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/options/js/jquery.1.9.1.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/options/js/eventos.js"></script>
 <?php }
 
+/* ACTIONS WP */
+include 'actions.php';
 
-  add_action('save_post', 'post_dato_imagen_prueba');
-  function post_dato_imagen_prueba() {
-  global $wpdb, $post;
-  if (!$post_id) $post_id = $_POST['post_ID'];
-  $var_1= $_POST['id_imagen_prueba'];
-  update_post_meta($post_id, 'id_imagen_prueba', $var_1);
-  }
-
-  add_action('save_post', 'post_dato_imagen_page');
-  function post_dato_imagen_page() {
-  global $wpdb, $post;
-  if (!$post_id) $post_id = $_POST['post_ID'];
-  $var_1= $_POST['id_imagen_page'];
-  update_post_meta($post_id, 'id_imagen_page', $var_1);
-  }
-
-
-  //BANERS HOME
-  add_action('save_post', 'post_analitycs_banner_home_1');
-  function post_analitycs_banner_home_1() {
-  global $wpdb, $post;
-  if (!$post_id) $post_id = $_POST['post_ID'];
-  $var_1= $_POST['analitycs_banner_home_1'];
-  update_post_meta($post_id, 'analitycs_banner_home_1', $var_1);
-  }
-
-
-  add_action('save_post', 'post_imagen_banner_1');
-  function post_imagen_banner_1() {
-  global $wpdb, $post;
-  if (!$post_id) $post_id = $_POST['post_ID'];
-  $var_1= $_POST['imagen_banner_1'];
-  update_post_meta($post_id, 'imagen_banner_1', $var_1);
-  }
-
-
-  add_action('save_post', 'post_url_banner_home_1');
-  function post_url_banner_home_1() {
-  global $wpdb, $post;
-  if (!$post_id) $post_id = $_POST['post_ID'];
-  $var_1= $_POST['url_banner_home_1'];
-  update_post_meta($post_id, 'url_banner_home_1', $var_1);
-  }
-
-
-
-
-  ?>
+?>
 
 <?php 
-/*------------------------------------------*\
-     BANNERS PAGE RESISTER ON REST API
-\*-------------------------------------------*/
-add_action( 'rest_api_init', 'slug_register_id_imagen_prueba' );
-function slug_register_id_imagen_prueba() {
-    register_rest_field( 'page',
-        'imagen_prueba',
-        array(
-            'get_callback'    => 'slug_get_imagen_prueba',
-            'update_callback' => 'slug_update_imagen_prueba',
-            'schema'          => null,
-        )
-    );
-}
-
-function slug_get_imagen_prueba( $post, $field_name, $request ) {
-     return get_post_meta($post['id'], 'id_imagen_prueba', true);
-}
 
 
-function slug_update_imagen_prueba( $value, $object, $field_name ) {
-    if ( ! $value || ! is_string( $value ) ) { return; }
-    return update_post_meta( $object->ID, $field_name, strip_tags( $value ) );
-}
+// REST API
+include 'REST_API_REGISTER/generales.php';
 
+// REST API BANNERS 
+include 'REST_API_REGISTER/banner_1.php';
 
-/*------------------------------------------*\
-     BANNERS PAGE RESISTER ON REST API
-\*-------------------------------------------*/
-add_action( 'rest_api_init', 'slug_register_id_imagen_page' );
-function slug_register_id_imagen_page() {
-    register_rest_field( 'page',
-        'imagen_page',
-        array(
-            'get_callback'    => 'slug_get_imagen_page',
-            'update_callback' => 'slug_update_imagen_page',
-            'schema'          => null,
-        )
-    );
-}
-
-function slug_get_imagen_page( $post, $field_name, $request ) {
-     return get_post_meta($post['id'], 'id_imagen_page', true);
-}
-
-
-function slug_update_imagen_page( $value, $object, $field_name ) {
-    if ( ! $value || ! is_string( $value ) ) { return; }
-    return update_post_meta( $object->ID, $field_name, strip_tags( $value ) );
-}
 ?>
 
 
