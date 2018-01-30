@@ -11,6 +11,8 @@ import { VideosComponent  } from './posts/videos/videos.component';
 import { OaxacaComponent  } from './posts/oaxaca/oaxaca.component';
 import { BusquedaComponent } from './posts/busqueda/busqueda.component';
 import { MenuGeneralComponent } from './posts/menu-general/menu-general.component';
+import { QuienesSomosComponent } from './posts/quienes-somos/quienes-somos.component';
+
 
 
 
@@ -41,6 +43,11 @@ const routes: Routes = [
   {
     path: 'publicaciones-espectaculos',
     component: EspectaculosComponent ,
+    pathMatch: 'full'
+  },
+   {
+    path: 'quienes-somos',
+    component: QuienesSomosComponent ,
     pathMatch: 'full'
   },
   {
