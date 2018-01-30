@@ -130,10 +130,19 @@ export class PostSingleComponent implements OnInit  {
 
         console.log(this.posts_related)
          //this.imageX = this.sanitizer.bypassSecurityTrustStyle(`url(${element.image})`);
+         this.loadTeads();
       });
   }
 
 
+
+
+  loadTeads(){
+    console.log("loadTeads OK... ********* ");
+    var script = document.createElement('script');
+    document.body.appendChild(script)
+    script.src = '//a.teads.tv/page/75644/tag';
+  }
 
   ngOnInit() {
   	this.route.params.forEach((params: Params) => {
@@ -144,9 +153,8 @@ export class PostSingleComponent implements OnInit  {
     });         
 
 
-    var script = document.createElement('script');
-    document.body.appendChild(script)
-    script.src = '//a.teads.tv/page/75644/tag';
+
+    
 
 
   }
