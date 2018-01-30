@@ -54,6 +54,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { FacebookModule } from 'ngx-facebook';
 import { Ng2SearchPipeModule } from 'ng2-search-filter-master';
 import { AdDFPComponent } from 'ng2-ad-dfp';
+import { QuienesSomosComponent } from './posts/quienes-somos/quienes-somos.component';
 
  
 
@@ -96,7 +97,8 @@ import { AdDFPComponent } from 'ng2-ad-dfp';
 
     BusquedaComponent,
     AdDFPComponent,
-    CeiboShare
+    CeiboShare,
+    QuienesSomosComponent
   ],
   imports: [
     BrowserModule,
