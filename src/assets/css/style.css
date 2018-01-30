@@ -1585,6 +1585,27 @@ color: #CC151A;
   margin: 0 auto;
   margin-bottom: 30px;
 }
+
+
+.imagen-general{
+  width: 30%;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 80px;
+  margin-bottom: 40px;
+}
+
+
+.imagen-general img{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.contenidoPostGeneral{
+  width: 100%;
+}
+
  
 
 .contenidoPost{
@@ -1625,6 +1646,51 @@ color: #CC151A;
     font-weight: 900;
     font-family: "Roboto-Medium";
   }
+
+
+  .ContendorGeneral {
+  max-width: 90%;
+  width: 100%;
+  height: auto;
+  font-family: "Roboto-Light";
+  font-size: 20px;
+  line-height: 28px;
+  color: #000;
+  text-align: justify;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.ContendorGeneral b{
+  font-weight: bold;
+   font-family: "Roboto-Bold";
+}
+
+
+.ContendorGeneral:first-letter {
+    text-transform: uppercase;
+    font-size: 102px;
+    color: #212121;
+    vertical-align: top;
+    float: left;
+    line-height: 82px;
+    margin-top: 0px;
+    margin-right: 10px;
+    font-weight: 900;
+    font-family: "Roboto-Medium";
+  }
+
+
+.colorRojo{
+  color: #FF0002 !important;
+}
+
+.titulo-General{
+  width: 100%;
+  height: auto;
+}
+
+
 
 .contenidoPost a{
   color: #CF0C00;
