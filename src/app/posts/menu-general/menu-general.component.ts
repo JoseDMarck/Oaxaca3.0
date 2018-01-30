@@ -321,6 +321,10 @@ GoToInicio() {
     console.log("Go to Inicio")
 }
 
+GoToQuienesSomos() {
+ this.router.navigate(["quienes-somos"]);
+}
+
 GoToBusqueda() {
  this.router.navigate(["busqueda"]);
 }
